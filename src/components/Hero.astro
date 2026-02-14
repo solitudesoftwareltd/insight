@@ -1,0 +1,37 @@
+---
+import { marked } from "marked";
+
+const { heading, cover } = Astro.props;
+
+// Convert markdown (**bold**) to HTML
+const headingHtml = heading ? marked.parseInline(heading) : "";
+---
+
+<section class="bg-white">
+  <div
+    class="bg-linear-to-r from-[#00A7E7] to-[#EC008C] mix-blend-multiply relative min-h-120 md:min-h-202.5 flex"
+  >
+    {
+      cover && (
+        <img
+          src={cover}
+          class="mix-blend-multiply absolute object-cover w-full h-full top-1/2 left-1/2 -translate-1/2 z-10"
+        />
+      )
+    }
+    <div
+      class="shell relative z-20 flex flex-col items-center justify-center h-full gap-5 text-center"
+    >
+      {
+        heading && (
+          <h1
+            set:html={headingHtml}
+            class="text-prose uppercase text-6xl md:text-8xl tracking-wide"
+          />
+        )
+      }
+
+      <!-- <button class="play">play</button> -->
+    </div>
+  </div>
+</section>

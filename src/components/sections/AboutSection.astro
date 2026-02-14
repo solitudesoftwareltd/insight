@@ -1,0 +1,66 @@
+---
+import { marked } from "marked";
+
+interface Mugshot {
+  image: string;
+  name: string;
+  position: string;
+}
+
+interface Props {
+  type: "about";
+  title: string;
+  content: string;
+  mugshots: Mugshot[];
+}
+
+const { title, content, mugshots } = Astro.props;
+---
+
+<section
+  class="shell about-section py-8 md:py-24 flex flex-col justify-end"
+  id="about"
+>
+  <div class="max-w-5xl w-full grid md:grid-cols-[200px_1fr]">
+    <h2
+      class="bg-[linear-gradient(68deg,#EC008C_1.97%,#FFF_11.14%,#00A7E7_26.14%) md:pr-12 block"
+      set:html={title}
+    />
+    <div
+      class="pt-12 md:pt-0 md:pl-12 md:mt-34 relative flex flex-col justify-center"
+    >
+      <div class="relative pb-10 md:pb-32 md:pl-12">
+        <div class="grad-line absolute left-0 top-0 h-full hidden md:block">
+        </div>
+        <div class="content" set:html={marked.parse(content)} />
+      </div>
+
+      <button>more</button>
+
+      <!-- <div class="md:pl-12 pt-10 md:pt-24">
+        <h3 class="mb-12 md:mb-24 text-center md:-ml-12">
+          LET'S <strong>TALK</strong>
+        </h3>
+        <div class="grid sm:grid-cols-2 justify-center">
+          {
+            mugshots.map((mugshot) => (
+              <div class="mugshot max-w-2xs sm:max-w-none">
+                <img src={mugshot.image} alt={mugshot.name} />
+                <div class="bg-linear-to-r from-[#00A7E7] to-[#EC008C] max-w-[80%] pl-2 lg:pl-8 pr-2 py-6 translate-x-6 -translate-y-7 grid grid-cols-[1fr_32px] items-center justify-between gap-2 lg:gap-5">
+                  <div>
+                    <h4 class="text-xl lg:text-2xl font-sans capitalize font-bold leading-5">
+                      {mugshot.name}
+                    </h4>
+                    <p class="text-lg md:text-xl font-semibold leading-7 m-0">
+                      {mugshot.position}
+                    </p>
+                  </div>
+                  <button class="white w-8 h-8 bg-contain" />
+                </div>
+              </div>
+            ))
+          }
+        </div> -->
+    </div>
+  </div>
+</section>

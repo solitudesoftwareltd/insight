@@ -1,0 +1,26 @@
+---
+import { marked } from "marked";
+
+interface Props {
+  type: "why";
+  title: string;
+  content: string;
+}
+
+const { title, content } = Astro.props;
+---
+
+<section class="shell py-8 md:py-24 why-section flex justify-end" id="why">
+  <div class="max-w-5xl w-full">
+    <!-- <h2
+      class="bg-[linear-gradient(68deg,#EC008C_3.97%,#FFF_11.14%,#00A7E7_26.14%)]"
+      set:html={title}
+    /> -->
+    <div
+      class="pt-12 content columns-1
+      md:columns-2
+      gap-14"
+      set:html={marked.parse(content)}
+    />
+  </div>
+</section>

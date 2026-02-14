@@ -1,0 +1,320 @@
+@import "@fontsource-variable/nunito";
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Beni";
+  src:
+    url("/fonts/beni/BeniBold.woff2") format("woff2"),
+    url("/fonts/beni/BeniBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Beni";
+  src:
+    url("/fonts/beni/BeniRegular.woff2") format("woff2"),
+    url("/fonts/beni/BeniRegular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Beni";
+  src:
+    url("/fonts/beni/BeniLight.woff2") format("woff2"),
+    url("/fonts/beni/BeniLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Beni";
+  src:
+    url("/fonts/beni/BeniBlack.woff2") format("woff2"),
+    url("/fonts/beni/BeniBlack.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Flama Semicondensed";
+  src:
+    url("/fonts/flama/FlamaSemicondensed-Extrabold.woff2") format("woff2"),
+    url("/fonts/flama/FlamaSemicondensed-Extrabold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Flama Semicondensed";
+  src:
+    url("/fonts/flama/FlamaSemicondensed-Black.woff2") format("woff2"),
+    url("/fonts/flama/FlamaSemicondensed-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Flama Semicondensed Basic";
+  src:
+    url("/fonts/flama/FlamaSemicondensed-Basic.woff2") format("woff2"),
+    url("/fonts/flama/FlamaSemicondensed-Basic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Flama Semicondensed";
+  src:
+    url("/fonts/flama/FlamaSemicondensed-Light.woff2") format("woff2"),
+    url("/fonts/flama/FlamaSemicondensed-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Flama Semicondensed";
+  src:
+    url("/fonts/flama/FlamaSemicondensed-Bold.woff2") format("woff2"),
+    url("/fonts/flama/FlamaSemicondensed-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Flama Semicondensed Book";
+  src:
+    url("/fonts/flama/FlamaSemicondensed-Book.woff2") format("woff2"),
+    url("/fonts/flama/FlamaSemicondensed-Book.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Flama Semicondensed";
+  src:
+    url("/fonts/flama/FlamaSemicondensed-Ultralight.woff2") format("woff2"),
+    url("/fonts/flama/FlamaSemicondensed-Ultralight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Flama Semicondensed";
+  src:
+    url("/fonts/flama/FlamaSemicondensed-Semibold.woff2") format("woff2"),
+    url("/fonts/flama/FlamaSemicondensed-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Flama Semicondensed";
+  src:
+    url("/fonts/flama/FlamaSemicondensed-Medium.woff2") format("woff2"),
+    url("/fonts/flama/FlamaSemicondensed-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-nunito: "Nunito Variable", sans-serif;
+
+  /* Primary brand / display font */
+  --font-display: "Beni", system-ui, sans-serif;
+
+  /* Main UI / content font */
+  --font-sans: "Flama Semicondensed", system-ui, sans-serif;
+
+  /* Optional variants (explicit control if needed) */
+  --font-sans-book: "Flama Semicondensed Book", system-ui, sans-serif;
+  --font-sans-basic: "Flama Semicondensed Basic", system-ui, sans-serif;
+
+  --color-prose: oklch(0.9761 0 0);
+}
+
+@layer base {
+  body {
+    @apply antialiased text-slate-900;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply text-prose tracking-tight font-display;
+  }
+
+  h2 {
+    @apply text-8xl md:text-[8.75rem] 
+      tracking-normal leading-16 md:leading-24 
+      bg-[linear-gradient(68deg,#EC008C_3.97%,#FFF_31.24%,#00A7E7_46.14%)] bg-clip-text 
+      text-transparent
+      [-webkit-text-fill-color:transparent];
+  }
+
+  h3, h4{
+    @apply text-prose font-display text-6xl md:text-[5rem] uppercase tracking-wide leading-15;
+  }
+
+  h4{
+    @apply tracking-wider text-6xl;
+  }
+
+  p {
+    @apply font-sans text-prose  text-xl md:text-[1.625rem] leading-7 md:leading-9;
+  }
+
+  ul:not(header *){
+    @apply list-disc pl-7 mb-5;
+  }
+
+  ul p{
+    @apply mb-0;
+  }
+
+  li{
+    
+  }
+
+  li::marker{
+    @apply text-[1.625rem] leading-9 text-prose;
+  }
+
+  a:hover {
+    @apply text-[#A5E0F7];
+  }
+
+  button,
+  [role="button"],
+  .btn {
+    @apply inline-flex flex-col items-center gap-2
+      text-base text-[#A5E0F7] uppercase font-nunito font-black tracking-widest
+      transition cursor-pointer
+      focus:outline-none
+      disabled:pointer-events-none disabled:opacity-50
+      relative;
+  }
+
+  button::before,
+  [role="button"]::before,
+  .btn::before {
+    content: "";
+    @apply block
+      w-14 h-14
+      bg-no-repeat bg-center
+      bg-size-[56px_56px]
+      bg-[url(/src/assets/button.svg)];
+  }
+
+  button.play::before,
+  [role="button"].play::before,
+  .btn.play::before {
+    @apply -rotate-90;
+  }
+
+  button:hover::before,
+  [role="button"]:hover::before,
+  .btn:hover::before {
+    animation: jiggle 0.4s ease-in-out;
+  }
+
+  button:hover {
+    @apply text-white;
+  }
+
+  button.white{
+    @apply bg-[url(/src/assets/button-white.svg)] bg-no-repeat  bg-size-[30px_30px]! h-8 w-8;
+  }
+
+  button.white::before{
+    @apply hidden;
+  }
+
+  textarea,
+  input[type=text],
+  input[type=url],
+  input[type=email]{
+    @apply h-17.5 border border-[#EC008C] p-0 w-full text-prose font-sans text-xl font-light px-5;
+  }
+
+  textarea::placeholder,
+  input[type=text]::placeholder,
+  input[type=url]::placeholder,
+  input[type=email]::placeholder {
+    @apply text-prose font-sans text-xl font-light;
+
+  }
+
+}
+
+@layer components {
+  .shell {
+    @apply max-w-7xl m-auto px-5 lg:px-16;
+  }
+
+  .grad-line {
+    @apply w-0.5 bg-[linear-gradient(180deg,#EC008C_0%,#EC008C_10%,#00A7E7_90%,#00A7E7_100%)];
+  }
+
+  .grad-line.horo{
+    @apply h-0.5 bg-[linear-gradient(90deg,#EC008C_0%,#EC008C_10%,#00A7E7_90%,#00A7E7_100%)];
+  }
+
+  .about-section .content p,
+  .why-section .content p{
+    @apply text-[1.375rem] mb-5;
+  }
+
+  .about-section .content ul p,
+  .why-section .content ul p{
+    @apply mb-0;
+  }
+
+  .swiper-pagination-bullet {
+    @apply w-9.25! h-9.25! bg-[url(/src/assets/pagination.svg)]! border-0! rounded-none! bg-transparent! opacity-100!;
+  }
+
+  .swiper-pagination-bullet-active {
+    @apply bg-[url(/src/assets/pagination-active.svg)]!;
+  }
+  
+  .carousel-full-description h3{
+    @apply text-[#EC008C] font-sans text-base font-bold leading-4 mb-3;
+  }
+
+  .carousel-full-description p{
+    @apply text-base font-normal font-sans leading-tight mb-6;
+  }
+}
+
+@keyframes jiggle {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-2px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-2px) rotate(2deg);
+  }
+  75% {
+    transform: translateY(-1px) rotate(-1deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}

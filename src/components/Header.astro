@@ -1,0 +1,65 @@
+---
+import { getEntry } from "astro:content";
+
+const navEntry = await getEntry("navigation", "navigation");
+if (!navEntry)
+  throw new Error("Missing content: src/content/navigation/navigation.json");
+
+const siteEntry = await getEntry("site", "site");
+if (!siteEntry) throw new Error("Missing content: src/content/site/site.json");
+
+const siteTitle = siteEntry.data.title ?? "My Site";
+const siteURL = siteEntry.data.url ?? "/";
+const rawLogo = siteEntry.data.logo;
+
+// Only build the logo path if a logo exists
+const siteLogo = rawLogo ? `${rawLogo}` : null;
+
+const items = navEntry.data.top.items ?? [];
+---
+
+<header
+  class="bg-[#000C13] absolute w-full h-20 md:h-28 top-0 left-0 z-50 transition-transform
+  group-[.scrolled]/body:-left-full
+  group-[.scrolled]/body:fixed
+  group-[.scrolled]/body:h-20
+  group-[.display-nav.scrolled]/body:translate-x-full"
+>
+  <div
+    class="shell grid md:grid-cols-[112px_1fr] lg:grid-cols-[193px_1fr] gap-14 items-center h-full"
+  >
+    <a href={siteURL}>
+      {
+        siteLogo ? (
+          <img
+            src={siteLogo}
+            width="193"
+            height="63"
+            alt={siteTitle}
+            class="w-28 h-auto group-[.scrolled]/body:w-28 lg:w-48.25"
+          />
+        ) : (
+          <span class="text-[#E4FEFF] font-black uppercase tracking-[0.2em]">
+            {siteTitle}
+          </span>
+        )
+      }
+    </a>
+    <nav class="hidden justify-end items-center md:flex">
+      <ul class="flex justify-between items-center w-full max-w-3xl">
+        {
+          items.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="text-[#E4FEFF] text-[0.6rem] lg:text-[0.813rem] font-nunito font-black uppercase tracking-[0.3em] py-2 block hover:text-[#A5E0F7]"
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>

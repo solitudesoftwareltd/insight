@@ -1,0 +1,100 @@
+<section
+  class="shell about-section py-12 md:py-28 flex flex-col sm:justify-end"
+  id="contact"
+>
+  <div
+    class="max-w-5xl w-full grid gap-5 sm:grid-rows-1 sm:gap-0 sm:grid-cols-[200px_1fr]"
+  >
+    <h3>CONTACT</h3>
+    <div class="sm:pl-12 sm:ml-12">
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        class="flex flex-col gap-6"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+
+        <!-- Honeypot for spam protection -->
+        <p class="hidden">
+          <label
+            >Don't fill this out if you're human: <input
+              name="bot-field"
+            /></label
+          >
+        </p>
+
+        <div class="grid grid-cols-2 gap-6">
+          <div>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              id="organisation"
+              name="organisation"
+              placeholder="Organisation"
+              required
+            />
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-6">
+          <div>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email Address"
+              required
+            />
+          </div>
+          <div>
+            <input
+              type="url"
+              id="website"
+              name="website"
+              placeholder="Website"
+            />
+          </div>
+        </div>
+
+        <div>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Message"
+            rows="10"
+            required
+            class="min-h-48 pt-5"></textarea>
+        </div>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div id="success-message" class="hidden">
+        Thanks! We'll be in touch soon.
+      </div>
+    </div>
+  </div>
+  <!-- <script>
+    const form = document.getElementById("contact-form") as HTMLFormElement;
+    form?.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+      form.classList.add("hidden");
+      document.getElementById("success-message")?.classList.remove("hidden");
+    });
+  </script> -->
+</section>

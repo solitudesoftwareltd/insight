@@ -1,0 +1,323 @@
+media:
+  - name: repo
+    label: Media
+    input: public/assets
+    output: /assets
+    extensions: [jpg, jpeg, png, svg, gif, mp4, webm, pdf]
+
+content:
+  - name: home
+    label: Home
+    type: file
+    path: src/content/pages/home.md
+    fields:
+      - name: title
+        label: Page title
+        type: string
+        required: true
+
+      - name: hero
+        label: Hero
+        component: hero
+
+      - name: sections
+        label: Page sections
+        type: block
+        list: 
+          collapsible:
+            collapsed: true  
+        blockKey: type 
+        blocks:
+          - name: intro
+            label: Intro section
+            component: introSection
+
+          - name: carousel
+            label: Carousel section
+            component: carouselSection
+
+          - name: contact
+            label: Contact form section
+            component: contactFormSection
+
+          - name: careers
+            label: Careers section
+            component: careersSection
+
+          - name: why
+            label: Why section
+            component: whySection
+
+          - name: testimonials
+            label: Testimonials section
+            component: testimonialsSection
+
+          - name: about
+            label: About section
+            component: aboutSection
+
+  - name: navigation
+    label: Navigation
+    type: file
+    path: src/content/navigation/navigation.json
+    fields:
+      - name: top
+        label: Top navigation
+        type: object
+        fields:
+          - name: items
+            label: Items
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{fields.label}"
+            fields:
+              - name: label
+                label: Label
+                type: string
+                required: true
+
+              - name: href
+                label: Link (anchor or URL)
+                type: string
+                required: true
+                description: "Use #intro, #carousel, #contact or https://example.com"
+
+  - name: contact
+    label: Contact Details
+    type: file
+    path: src/content/contact/contact.json
+    fields:
+      - name: address
+        label: Address
+        type: string
+        required: true
+      
+      - name: socialMedia
+        label: Social Media Links
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.url}"
+        fields:
+          - name: url
+            label: URL
+            type: string
+            required: true
+          - name: icon
+            label: Icon Image
+            type: image
+            required: true
+
+  - name: site
+    label: Branding & SEO
+    path: src/content/site/site.json
+    type: file
+    fields:
+      - name: title
+        label: Website title
+        type: string
+
+      - name: description
+        label: Website description
+        type: string
+        description: Will be used for any page with no description.
+
+      - name: url
+        label: Website URL
+        type: string
+        pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$
+
+      - name: cover
+        label: Preview image
+        type: image
+        description: Image used in the social preview on social networks (e.g. Facebook, Twitter...)
+
+      - name: logo
+        label: Site logo
+        type: image
+        description: Image used header branding
+
+components:
+  hero:
+    type: object
+    fields:
+      - name: heading
+        label: Heading
+        type: rich-text
+        required: true
+
+      - name: cover
+        label: Hero image
+        type: image
+        description: Image used in as the main hero cover
+
+      - name: video
+        label: Video link
+        type: string
+        description: URL path to the video link
+
+  introSection:
+    type: object
+    fields:
+      - name: title
+        label: Title
+        type: rich-text
+      - name: content
+        label: Content
+        type: rich-text
+
+  aboutSection:
+    type: object
+    fields:
+      - name: title
+        label: Title
+        type: rich-text
+        required: true
+      - name: content
+        label: Content
+        type: rich-text
+        required: true
+      - name: mugshots
+        label: Mugshots
+        type: object
+        list:
+          max: 2
+          collapsible:
+            collapsed: true
+            summary: "{fields.name}"
+        fields:
+          - name: image
+            label: Image
+            type: image
+            required: true
+          - name: name
+            label: Name
+            type: string
+            required: true
+          - name: position
+            label: Position
+            type: string
+            required: true
+
+  testimonialsSection:
+    type: object
+    fields:
+      - name: slides
+        label: Testimonial Slides
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.name}"
+        fields:
+          - name: image
+            label: Background Image
+            type: image
+            required: true
+          - name: quote
+            label: Quote
+            type: rich-text
+            required: true
+          - name: name
+            label: Person's Name
+            type: string
+            required: true
+
+  careersSection:
+    type: object
+    fields:
+      - name: title
+        label: Section Title
+        type: rich-text
+        required: true
+      - name: items
+        label: List Items
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.title}"
+        fields:
+          - name: title
+            label: Title
+            type: string
+            required: true
+          - name: description
+            label: Description
+            type: rich-text
+            required: true
+          - name: form
+            label: Form
+            type: string
+            required: true
+
+  carouselSection:
+    type: object
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: subtitle
+        label: Subtitle
+        type: string
+      - name: slides
+        label: Slides
+        type: object
+        list: 
+          collapsible:
+              collapsed: true
+              summary: "{fields.caption}"
+        fields:
+          - name: image
+            label: Image
+            type: image
+          - name: sector
+            label: Sector
+            type: string
+          - name: caption
+            label: Caption
+            type: string
+          - name: link
+            label: Link
+            type: string
+          - name: problem
+            label: Problem
+            type: string
+          - name: solution
+            label: Solution
+            type: string
+          - name: value
+            label: Value
+            type: string
+          - name: fullDescription
+            label: Full Description
+            type: rich-text
+
+  whySection:
+    type: object
+    fields:
+      - name: title
+        label: Title
+        type: rich-text
+        required: true
+      - name: content
+        label: Content
+        type: rich-text
+        required: true
+
+  contactFormSection:
+    type: object
+    fields:
+      - name: title
+        label: Title
+        type: string
+      - name: recipientEmail
+        label: Recipient email
+        type: string
+        required: true
+      - name: successMessage
+        label: Success message
+        type: string

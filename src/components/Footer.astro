@@ -1,0 +1,22 @@
+---
+import { getEntry } from "astro:content";
+
+const contactData = await getEntry("contact", "contact");
+---
+
+<footer class="bg-linear-to-r from-[#00A7E7] to-[#EC008C] py-8">
+  <div class="shell flex justify-between items-center gap-6 md:gap-12">
+    <p class="text-base md:text-lg lg:text-2xl leading-tight">
+      {contactData?.data.address}
+    </p>
+    <div class="flex justify-between gap-2.5">
+      {
+        contactData?.data.socialMedia.map((social) => (
+          <a href={social.url} target="_blank" rel="noopener noreferrer">
+            <img src={`${social.icon}`} alt="Social media" class="min-w-9" />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</footer>

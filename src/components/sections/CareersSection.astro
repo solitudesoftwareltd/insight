@@ -1,0 +1,121 @@
+---
+import { marked } from "marked";
+
+type CareerItem = {
+  title: string;
+  description: string;
+  form: string;
+};
+
+type Props = {
+  type: "careers";
+  title: string;
+  items: CareerItem[];
+};
+
+const { title, items } = Astro.props;
+---
+
+<section class="shell text-center flex flex-col items-end justify-end" id="how">
+  <h3 class="self-center" set:html={marked.parseInline(title)} />
+  <div
+    class="grid grid-rows-2 sm:grid-row-1 sm:grid-cols-2 text-left w-full max-w-5xl mt-8 sm:mt-14 md:mt-24 pb-10 sm:pb-20 md:pb-32 relative"
+  >
+    <div
+      class="absolute h-full top-0 left-1/2 -translate-x-1/2 hidden sm:grid grid-rows-[1fr_auto] justify-items-center"
+    >
+      <div class="grad-line"></div>
+      <button>more</button>
+    </div>
+    <div class="sm:pt-7 pl-4 sm:pl-0">
+      {
+        items.map((item, index) => (
+          <div
+            class={`career-title cursor-pointer pl-12 sm:mb-9 bg-[url(/src/assets/icon-hover.svg)] transition-all bg-no-repeat ${index === 0 ? "bg-left" : "bg-position-[-40px_center]"}`}
+            data-index={index}
+          >
+            <h4
+              class={`text-xl sm:text-[1.625rem] font-sans sm:leading-7 ${index === 0 ? "text-[#00A7E7]" : ""}`}
+            >
+              {item.title}
+            </h4>
+          </div>
+        ))
+      }
+    </div>
+    <div class="career-descriptions relative pt-8 sm:pt-0">
+      {
+        items.map((item, index) => (
+          <div
+            class={`career-description ml-12 sm:ml-24 flex flex-col items-start justify-start absolute inset-0 transition-opacity duration-300 ${index === 0 ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+            data-index={index}
+          >
+            <div set:html={marked.parse(item.description)} />
+
+            <a
+              href={item.form}
+              target="_blank"
+              class="text-[#00A7E7] flex flex-col gap-2 justify-center items-center mt-3 sm:mt-0 sm:absolute right-0 top-full"
+            >
+              <img src="assets/form-icon.svg" width="36" />
+              Fill out form
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<script>
+  function initCareers() {
+    const titles = document.querySelectorAll(".career-title");
+    const descriptions = document.querySelectorAll(".career-description");
+
+    const clearSelect = function () {
+      titles.forEach((title) => {
+        title.classList.add("bg-position-[-40px_center]");
+        title.classList.remove("bg-left");
+
+        title.querySelector("h4")?.classList.remove("text-[#00A7E7]");
+      });
+    };
+
+    titles.forEach((title) => {
+      const handler = () => {
+        const index = title.getAttribute("data-index");
+
+        clearSelect();
+
+        title.querySelector("h4")?.classList.add("text-[#00A7E7]");
+        title.classList.remove("bg-position-[-40px_center]");
+        title.classList.add("bg-left");
+
+        descriptions.forEach((desc) => {
+          desc.classList.remove("opacity-100");
+          desc.classList.add("opacity-0", "pointer-events-none");
+        });
+
+        const matchingDesc = document.querySelector(
+          `.career-description[data-index="${index}"]`,
+        );
+        if (matchingDesc) {
+          matchingDesc.classList.remove("opacity-0", "pointer-events-none");
+          matchingDesc.classList.add("opacity-100");
+        }
+      };
+
+      // Desktop hover
+      title.addEventListener("mouseenter", handler);
+
+      // Universal fallback
+      title.addEventListener("click", handler);
+    });
+  }
+
+  // Initialize on first load
+  initCareers();
+
+  // Re-initialize if using Astro View Transitions
+  document.addEventListener("astro:page-load", initCareers);
+</script>

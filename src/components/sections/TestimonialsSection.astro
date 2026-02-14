@@ -1,0 +1,90 @@
+---
+interface Slide {
+  image: string;
+  quote: string;
+  name: string;
+}
+
+interface Props {
+  type: "testimonials";
+  slides: Slide[];
+}
+
+const { slides } = Astro.props;
+---
+
+<section
+  class="testimonials-section relative w-full h-150 sm:h-177.5"
+  id="credibility"
+>
+  <img
+    src="assets/testimonial-logo.svg"
+    class="absolute z-20 left-1/2 top-10 sm:top-20 -translate-x-1/2"
+    loading="lazy"
+  />
+
+  <div class="swiper testimonials-swiper h-full">
+    <div class="swiper-wrapper">
+      {
+        slides.map((slide) => (
+          <div class="swiper-slide bg-white">
+            <div class="relative w-full h-150 sm:h-177.5 flex items-center justify-center bg-linear-to-r from-[#00A7E7] to-[#EC008C] mix-blend-multiply">
+              <img
+                src={slide.image}
+                class="mix-blend-multiply w-full h-full object-cover absolute"
+                loading="lazy"
+              />
+
+              <div class="relative z-10 max-w-4xl px-8 text-white text-center font-sans">
+                <blockquote
+                  class="text-xl sm:text-3xl leading-tight text-prose mb-6"
+                  set:html={slide.quote}
+                />
+
+                <p class="text-[#A5E0F7] text-xl sm:text-3xl font-bold">
+                  {slide.name}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="hidden md:block absolute w-full top-1/2 left-0">
+      <div class="shell flex justify-between">
+        <div
+          class="swiper-button-prev h-18.5! w-6.5! bg-[url(/src/assets/arrow.svg)] [&>svg]:hidden rotate-180 relative!"
+        >
+        </div>
+        <div
+          class="swiper-button-next h-18.5! w-6.5! bg-[url(/src/assets/arrow.svg)] [&>svg]:hidden relative!"
+        >
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination top-auto! bottom-9!"></div>
+  </div>
+</section>
+
+<script>
+  import Swiper from "swiper";
+  import { Navigation, Pagination, Autoplay } from "swiper/modules";
+  import "swiper/css";
+  import "swiper/css/navigation";
+  import "swiper/css/pagination";
+
+  new Swiper(".testimonials-swiper", {
+    modules: [Navigation, Pagination, Autoplay],
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    autoplay: { delay: 5000 },
+    loop: true,
+  });
+</script>

@@ -1,0 +1,39 @@
+---
+import { marked } from "marked";
+
+export interface Props {
+  type: "intro";
+  title: string;
+  content: string;
+}
+
+const { title, content } = Astro.props;
+---
+
+<section
+  class="shell grid grid-rows-2 gap-5 sm:gap-0 sm:grid-rows-1 sm:grid-cols-2 pt-8 pb-22 md:pt-16 md:pb-48 items-center relative"
+  id="what"
+>
+  <div
+    class="absolute h-full top-0 left-1/2 -translate-x-1/2 hidden sm:grid grid-rows-2 gap-12 justify-items-center"
+  >
+    <div class="grad-line"></div>
+    <div
+      class="grid grid-rows-1 md:grid-rows-[auto_1fr] justify-items-center gap-5"
+    >
+      <button>more</button>
+      <div class="grad-line hidden md:block"></div>
+    </div>
+  </div>
+
+  <div class="lg:pl-20">
+    <h2 class="flex flex-col items-start justify-start">
+      <span>immersive</span><span><strong>Industry</strong></span><span
+        >Experiences</span
+      >
+    </h2>
+  </div>
+  <div class="sm:pl-20">
+    {content && <p>{marked.parseInline(content)}</p>}
+  </div>
+</section>

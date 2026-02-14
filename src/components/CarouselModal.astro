@@ -1,0 +1,176 @@
+---
+import "swiper/css";
+import "swiper/css/navigation";
+
+import { marked } from "marked";
+
+type Slide = {
+  image: string;
+  sector: string;
+  caption: string;
+  link?: string;
+  problem: string;
+  solution: string;
+  value: string;
+  fullDescription: string;
+};
+
+type Props = {
+  slides: Slide[];
+};
+
+const { slides } = Astro.props as Props;
+---
+
+<!-- Fullscreen Modal -->
+<div id="carousel-modal" class="fixed inset-0 bg-[#100517]/65 z-50 hidden">
+  <div class="h-full flex items-center justify-center md:px-16">
+    <!-- Modal Swiper Carousel -->
+    <div
+      class="modal-swiper w-full max-w-6xl bg-[#100517] shadow-[0_4px_9px_5px_rgba(255,255,255,0.20)] h-full md:h-10/12 overflow-hidden rounded"
+    >
+      <div class="swiper-wrapper">
+        {
+          slides.map((slide) => (
+            <div class="swiper-slide">
+              <div class="grid grid-rows-[auto_1fr] gap-6 md:gap-0 md:grid-rows-[7rem_1fr] text-left px-10 lg:px-28 py-10 lg:py-20 relative h-full">
+                <a class="close-carousel-modal absolute top-4 lg:top-8 right-8 text-white text-[12px] z-50 font-nunito font-bold tracking-[3px] cursor-pointer flex justify-between gap-3 items-center">
+                  CLOSE
+                  <img src="assets/close-icon.svg" />
+                </a>
+                <div class="pt-6 md:pt-0">
+                  <h3>{slide.caption}</h3>
+                </div>
+                <div class="grid grid-cols-1 grid-rows-2 gap-6 md:gap-0 md:grid-rows-1 md:grid-cols-[45%_55%] overflow-hidden">
+                  <div class="relative h-full overflow-hidden">
+                    <img
+                      src={slide.image}
+                      alt={slide.caption}
+                      class="w-full h-full absolute object-cover left-1/2 top-1/2 -translate-1/2"
+                    />
+                  </div>
+                  <div class="md:pl-12 h-full overflow-hidden">
+                    <div class="h-full overflow-y-scroll">
+                      <div class="grid grid-cols-[6rem_1fr]">
+                        <span class="font-sans font-bold text-base text-[#00A7E7] uppercase">
+                          problem
+                        </span>
+                        <span class="font-sans font-normal text-base text-white">
+                          {slide.problem}
+                        </span>
+                      </div>
+                      <div class="grid grid-cols-[6rem_1fr]">
+                        <span class="font-sans font-bold text-base text-[#00A7E7] uppercase">
+                          solution
+                        </span>
+                        <span class="font-sans font-normal text-base text-white">
+                          {slide.solution}
+                        </span>
+                      </div>
+
+                      <div class="grid grid-cols-[6rem_1fr]">
+                        <span class="font-sans font-bold text-base text-[#00A7E7] uppercase">
+                          value
+                        </span>
+                        <span class="font-sans font-normal text-base text-white">
+                          {slide.value}
+                        </span>
+                      </div>
+
+                      <div class="grad-line horo w-full mt-2.5 mb-8" />
+
+                      <div class="carousel-full-description">
+                        <div set:html={marked.parse(slide.fullDescription)} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+
+      <!-- Navigation Arrows -->
+      <div
+        class="hidden md:flex absolute w-full top-1/2 left-0 justify-between"
+      >
+        <div
+          class="swiper-button-prev h-18.5! w-6.5! bg-[url(/src/assets/arrow.svg)] [&>svg]:hidden rotate-180 relative! ml-6!"
+        >
+        </div>
+        <div
+          class="swiper-button-next h-18.5! w-6.5! bg-[url(/src/assets/arrow.svg)] [&>svg]:hidden relative! mr-6!"
+        >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    import Swiper from "swiper";
+    import { Navigation } from "swiper/modules";
+
+    let modalSwiper: Swiper | null = null;
+
+    function initModalSwiper() {
+      if (!modalSwiper) {
+        modalSwiper = new Swiper(".modal-swiper", {
+          modules: [Navigation],
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          slidesPerView: 1,
+          spaceBetween: 30,
+        });
+      }
+    }
+
+    function setupModal() {
+      const modal = document.getElementById("carousel-modal");
+
+      if (!modal) return;
+
+      // Open modal
+      document.querySelectorAll(".open-carousel-modal").forEach((button) => {
+        button.addEventListener("click", (e) => {
+          e.preventDefault();
+          const btn = e.currentTarget;
+          if (!(btn instanceof HTMLElement)) return;
+          const index = parseInt(btn.getAttribute("data-index") || "0");
+
+          modal?.classList.remove("hidden");
+          initModalSwiper();
+          if (modalSwiper) {
+            modalSwiper.slideTo(index, 0);
+          }
+        });
+      });
+
+      // Close modal
+      document.querySelectorAll(".close-carousel-modal").forEach((button) => {
+        button.addEventListener("click", () => {
+          modal?.classList.add("hidden");
+        });
+      });
+
+      // Close on background click
+      modal?.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.add("hidden");
+        }
+      });
+
+      // Keyboard
+      document.addEventListener("keydown", (e) => {
+        if (!modal?.classList.contains("hidden") && e.key === "Escape") {
+          modal.classList.add("hidden");
+        }
+      });
+    }
+
+    setupModal();
+    document.addEventListener("astro:page-load", setupModal);
+  </script>
+</div>

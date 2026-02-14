@@ -1,0 +1,57 @@
+---
+import "../styles/global.css";
+import { getEntry } from "astro:content";
+
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const siteEntry = await getEntry("site", "site");
+if (!siteEntry) throw new Error("Missing content: src/content/site/site.json");
+
+const siteTitle = siteEntry.data.title ?? "My Site";
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{siteTitle}</title>
+  </head>
+  <body
+    class="group/body min-h-screen bg-linear-to-r from-[#010c13] via-[#05111b] to-[#12091d] pt-20 md:pt-28"
+  >
+    <Header />
+    <main class="relative">
+      <slot />
+      <div
+        class="bg-[url(assets/columns.png)] bg-no-repeat bg-bottom-left absolute bottom-0 -left-36 -z-1 opacity-[.01] w-full h-full"
+      >
+      </div>
+    </main>
+    <Footer />
+
+    <script>
+      function handleScroll() {
+        const scrollY = window.scrollY;
+
+        if (scrollY > 120) {
+          document.body.classList.add("scrolled");
+        } else {
+          document.body.classList.remove("scrolled");
+        }
+
+        if (scrollY > 550) {
+          document.body.classList.add("display-nav");
+        } else {
+          document.body.classList.remove("display-nav");
+        }
+      }
+
+      handleScroll();
+      window.addEventListener("scroll", handleScroll);
+    </script>
+  </body>
+</html>
