@@ -353,25 +353,26 @@ sections:
   - type: about
     title: WE BELIEVE
     content: >-
-      *   Inspiration provides a sense of purpose, connection and the internal
-      drive to acquire more knowledge and learn new skills
-          
-      *   Interests, strengths and values aligned with specific training lead to
-      a more motivated and engaged workforce
-          
-      *   Delivering effective social value should be embedded in business
-      operations to benefit society
-          
+      Many screen networks fail because content becomes generic. Many print
+      programmes underperform because they’re static and slow to adapt.
 
-      With a background in creating memorable experiences that influence
-      behaviour for the world's biggest brands, IIE was founded to provide
-      employers, government and education with expertise to solve workforce and
-      social value challenges with creativity, imagination and innovation.
+
+      Insight DPA exists to remove those seams. By bringing digital screens and
+      physical production under one accountable partner, we help brands:
+
+
+      *   Influence decisions at the point of action
+          
+      *   Extend the lifespan and impact of campaigns
+          
+      *   Create new, sustainable revenue streams
+          
+      *   Reduce cost, waste and operational complexity
     mugshots:
       - image: /assets/dan 1.png
-        name: Dan Howson
+        name: Matt Rogers
         position: Director Operations
       - image: /assets/luke 1.png
-        name: Luke Hardware
+        name: Tom Simpson
         position: Director Finance
 ---
