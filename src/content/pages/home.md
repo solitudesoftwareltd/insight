@@ -321,21 +321,23 @@ sections:
           Fill out our Create Social Value Brief
         form: https://diversefinefood.co.uk/
   - type: why
-    title: how we do it
+    title: designed once. activated everywhere
     content: >-
-      We use innovative techniques and technologies trusted by the world’s
-      biggest brands to transport people into environments they have never
-      experienced before - stimulating the senses and driving deeper, more
-      memorable engagement.
+      Our difference is how these two disciplines connect. Creative concepts are
+      developed once, then activated consistently across:
 
 
-      *   Marketing & Social Value Strategies
+      *   On‑shelf and in‑aisle physical POS
           
-      *   360º & 2D Films
+      *   In‑store and in‑venue digital screens
           
-      *   Multi-Sensory Live Production
+      *   Experiential retail and events
           
-      *   XR and AI technologies
+      *   Workplace and interior environments
+          
+
+      By managing creative, production and digital delivery together, we remove
+      friction, reduce duplication, and protect brand consistency at scale.
   - type: testimonials
     slides:
       - image: /assets/Exeter-city-test-2.jpg
