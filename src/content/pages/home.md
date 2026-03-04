@@ -5,11 +5,14 @@ hero:
   cover: /assets/hero.png
 sections:
   - type: intro
-    title: "## IMMERSIVE **INDUSTRY** EXPERIENCES"
-    content: We deliver unique careers, business and industry solutions, solving the
-      problem of limited public awareness and access, transforming how people
-      get inspired, discover opportunities, and learn to create a more motivated
-      and engaged workforce.
+    title: "## DESIGN **PRODUCTION** ACTIVIATION"
+    content: >-
+      **Turning physical space into a connected activation channel.**
+
+
+      Insight DPA helps brands and businesses unlock the full value of their
+      physical environments by connecting digital screen networks with
+      world‑class design, print and activation services.
   - type: carousel
     title: EXPLORE
     subtitle: OUR WORK & INDUSTRY CONTENT
