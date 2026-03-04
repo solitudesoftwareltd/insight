@@ -341,27 +341,15 @@ sections:
   - type: testimonials
     slides:
       - image: /assets/Exeter-city-test-2.jpg
-        quote: '"IIE enabled us to provide a unique experience for our staff, fans and
-          players, reliving the special night versus Nottingham Forest in the FA
-          Cup, adding to our fan engagement."'
-        name: Marcus Flitcroft, Technical Director, Exeter City Football Club
+        quote: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius
+          auctor tincidunt. Sed interdum eu est at viverra. Fusce pharetra
+          consectetur euismod."'
+        name: Marcus Flitcroft, Technical Director,  Football Club
       - image: /assets/taylor-testimonial.jpg
-        quote: "“Your film was authentic and fun, perfectly capturing the
-          #MakeAHome campaign, celebrating what makes Taylor Wimpey a unique
-          employer. So good, the film is being used across the entire group."
+        quote: “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius
+          auctor tincidunt. Sed interdum eu est at viverra. Fusce pharetra
+          consectetur euismod..
         name: Rob Baker, Managing Director, Taylor Wimpey
-      - image: /assets/juniper-testimonial.jpg
-        quote: '"IIE have revolutionised how young people see the roofing industry.
-          Learners get an understanding of site life, career progression
-          opportunities and help prepare for a career in roofing."'
-        name: Sam Broomhall, Director of Business Development at Juniper Training
-      - image: /assets/libraries-testimonial2.jpg
-        quote: “IIE have been fantastic, they've supercharged our work! Their
-          connections and creativity help take projects to the next level. They
-          bring great partners onboard, helping us turn ideas into something
-          magical for children across Devon.”
-        name: Rachel Payne, Business Development & Fundraising Manager, Libraries
-          Unlimited
   - type: about
     title: WE BELIEVE
     content: >-
