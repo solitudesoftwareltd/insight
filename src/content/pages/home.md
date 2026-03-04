@@ -287,9 +287,9 @@ sections:
           mus. Vivamus lobortis urna in pulvinar molestie. Suspendisse eu ornare
           metus.
   - type: careers
-    title: BRING YOUR **CAREERS, BUSINESS & INDUSTRY** TO LIFE
+    title: DESIGN **TO WORK** TOGETHER
     items:
-      - title: INSPIRE & RECRUIT
+      - title: PHYSICAL
         description: |-
           *   Increase industry awareness
               
@@ -299,8 +299,8 @@ sections:
               
 
           Fill out our Candidate Engagement Request Brief
-        form: https://forms.office.com/pages/responsepage.aspx?id=fU803el3f06yIvmesfDUW-jVuwJ2zYFAldxKjMx5NMBUMjZINzlFUk1KWDdOVDcyWFRUVTgxNVY2RS4u&route=shorturl
-      - title: TRAIN & RETAIN
+        form: https://diversefinefood.co.uk/
+      - title: DIGITAL
         description: |-
           *   Develop hard and soft skills
               
@@ -310,8 +310,8 @@ sections:
               
 
           Fill out our Workforce Training Request Survey
-        form: https://forms.office.com/pages/responsepage.aspx?id=fU803el3f06yIvmesfDUW-jVuwJ2zYFAldxKjMx5NMBUNDRCMFI0VFpWMFozQTJLU0tMSTBFTDBMVy4u&route=shorturl
-      - title: CREATE SOCIAL VALUE
+        form: https://diversefinefood.co.uk/
+      - title: CONTINUOUS
         description: |-
           *   Provide for specialist needs
               
@@ -319,7 +319,7 @@ sections:
               
 
           Fill out our Create Social Value Brief
-        form: https://forms.office.com/pages/responsepage.aspx?id=fU803el3f06yIvmesfDUW-jVuwJ2zYFAldxKjMx5NMBUNE5IUE1FN1pVMEU3Vk9BWE1SRFowVk5TSC4u&route=shorturl
+        form: https://diversefinefood.co.uk/
   - type: why
     title: how we do it
     content: >-
