@@ -6,11 +6,7 @@ hero:
 sections:
   - type: intro
     title: "## DESIGN **PRODUCTION** ACTIVIATION"
-    content: >-
-      **Turning physical space into a connected activation channel.**
-
-
-      Insight DPA helps brands and businesses unlock the full value of their
+    content: Insight DPA helps brands and businesses unlock the full value of their
       physical environments by connecting digital screen networks with
       world‑class design, print and activation services.
   - type: carousel
