@@ -267,7 +267,7 @@
   }
 
   .grad-line {
-    @apply w-0.5 bg-[linear-gradient(180deg,#EC008C_0%,#EC008C_10%,#00A7E7_90%,#00A7E7_100%)];
+    @apply w-0.5 bg-[#fff];
   }
 
   .grad-line.horo{
