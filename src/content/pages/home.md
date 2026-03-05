@@ -16,8 +16,8 @@ sections:
     subtitle: OUR WORK & INDUSTRY CONTENT
     slides:
       - image: /assets/Build-Torbay.jpg
-        sector: Construction
-        caption: Build Torbay/Torbay Council
+        sector: Physical POS
+        caption: On-shelf & in-isle
         link: https://app.pagescms.org/solitudesoftwareltd/iie/master/file/home
         problem: "Workforce Challenges & Candidate Engagement "
         solution: 360º Films & VR Headsets
@@ -51,8 +51,8 @@ sections:
           mus. Vivamus lobortis urna in pulvinar molestie. Suspendisse eu ornare
           metus.
       - image: /assets/CITB.jpg
-        sector: CREATIVE
-        caption: Backstage Centre
+        sector: Digital screens
+        caption: In-store & In-venue
         link: https://app.pagescms.org/solitudesoftwareltd/iie/master/file/home
         problem: Workforce Challenges & Candidate Engagement
         solution: 360º Films & VR Headsets
@@ -85,8 +85,8 @@ sections:
           mus. Vivamus lobortis urna in pulvinar molestie. Suspendisse eu ornare
           metus.
       - image: /assets/CIOB.jpg
-        sector: Construction
-        caption: CIOB
+        sector: Events
+        caption: Experiential retail
         link: https://app.pagescms.org/solitudesoftwareltd/iie/master/file/home
         problem: Workforce Challenges & Candidate Engagement
         solution: Multi-sensory live demo, 360º Films & VR Headsets
@@ -119,45 +119,11 @@ sections:
           mus. Vivamus lobortis urna in pulvinar molestie. Suspendisse eu ornare
           metus.
       - image: /assets/CIOTB2.jpg
-        sector: Construction
-        caption: CITB
+        sector: Environments
+        caption: Workplace & Interior
         link: https://app.pagescms.org/solitudesoftwareltd/iie/master/file/home
         problem: Workforce Challenges & Candidate Engagement
         solution: Multi-sensory live demo, 360º Films & VR Headsets
-        value: Increased candidate engagement metrics
-        fullDescription: >-
-          ### OVERVIEW
-
-
-          Quisque in aliquet nulla, sit amet ultricies neque. Vivamus ut
-          scelerisque erat, ut maximus mauris. Suspendisse finibus egestas
-          ligula, ornare mattis orci lobortis sit amet.
-
-
-          ### BUSINESS
-
-
-          Duis at dignissim neque. Aliquam dictum porttitor metus, vitae
-          sagittis sapien euismod in. Sed aliquam blandit sagittis. Orci varius
-          natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-          mus. Vivamus lobortis urna in pulvinar molestie. Suspendisse eu ornare
-          metus.
-
-
-          ### INDUSTRY
-
-
-          Duis at dignissim neque. Aliquam dictum porttitor metus, vitae
-          sagittis sapien euismod in. Sed aliquam blandit sagittis. Orci varius
-          natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-          mus. Vivamus lobortis urna in pulvinar molestie. Suspendisse eu ornare
-          metus.
-      - image: /assets/Cormac.jpg
-        sector: Construction
-        caption: Cormac
-        link: https://app.pagescms.org/solitudesoftwareltd/iie/master/file/home
-        problem: Workforce Challenges & Candidate Engagement
-        solution: 360º Films & VR Headsets
         value: Increased candidate engagement metrics
         fullDescription: >-
           ### OVERVIEW
