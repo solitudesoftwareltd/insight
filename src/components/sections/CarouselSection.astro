@@ -1,4 +1,5 @@
 ---
+import { marked } from "marked";
 import Carousel from "../Carousel.astro";
 import CarouselModal from "../CarouselModal.astro";
 
@@ -24,7 +25,8 @@ const { title, subtitle, slides } = Astro.props as Props;
 
 <section class="py:8 md:py-24 text-center" id="pathfinders">
   <div class="shell">
-    <h3>{title}</h3>
+    
+    <div set:html={marked.parse(title)} />
     <p class="mt-4 leading-8">{subtitle}</p>
   </div>
   <Carousel slides={slides} />
