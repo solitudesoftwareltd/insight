@@ -155,6 +155,14 @@ sections:
           metus.
   - type: careers
     title: Crafting **physical experiences** that bring **brands to life**
+    subtitle: >-
+      Over the years, our reputation has been built on delivering end‑to‑end
+      design, print and production capability, from creative concept through to
+      manufacture, installation and rollout.
+
+
+      This discipline provides the physical foundation that makes digital
+      activation work.
     items:
       - title: Creative & artwork production
         description: |-
