@@ -22,10 +22,10 @@ const { title, items } = Astro.props;
     class="grid grid-rows-2 sm:grid-row-1 sm:grid-cols-2 text-left w-full max-w-5xl mt-8 sm:mt-14 md:mt-24 pb-10 sm:pb-20 md:pb-32 relative"
   >
     <div
-      class="absolute h-full top-0 left-1/2 -translate-x-1/2 hidden sm:grid grid-rows-[1fr_auto] justify-items-center"
+      class="absolute h-full top-0 left-1/2 -translate-x-1/2 hidden sm:grid grid-rows-[1fr_auto] gap-3 justify-items-center"
     >
       <div class="grad-line"></div>
-      <button>more</button>
+      <button>get in touch</button>
     </div>
     <div class="sm:pt-7 pl-4 sm:pl-0">
       {
@@ -35,7 +35,7 @@ const { title, items } = Astro.props;
             data-index={index}
           >
             <h4
-              class={`text-xl sm:text-[1.625rem] font-sans sm:leading-7 ${index === 0 ? "text-[#00A7E7]" : ""}`}
+              class={`text-xl sm:text-[1.625rem] font-sans sm:leading-7 ${index === 0 ? "text-[#89bd25]" : ""}`}
             >
               {item.title}
             </h4>
@@ -52,14 +52,14 @@ const { title, items } = Astro.props;
           >
             <div set:html={marked.parse(item.description)} />
 
-            <a
+            {/* <a
               href={item.form}
               target="_blank"
               class="text-[#00A7E7] flex flex-col gap-2 justify-center items-center mt-3 sm:mt-0 sm:absolute right-0 top-full"
             >
               <img src="assets/form-icon.svg" width="36" />
               Fill out form
-            </a>
+            </a> */}
           </div>
         ))
       }
@@ -77,7 +77,7 @@ const { title, items } = Astro.props;
         title.classList.add("bg-position-[-40px_center]");
         title.classList.remove("bg-left");
 
-        title.querySelector("h4")?.classList.remove("text-[#00A7E7]");
+        title.querySelector("h4")?.classList.remove("text-[#89bd25]");
       });
     };
 
@@ -87,7 +87,7 @@ const { title, items } = Astro.props;
 
         clearSelect();
 
-        title.querySelector("h4")?.classList.add("text-[#00A7E7]");
+        title.querySelector("h4")?.classList.add("text-[#89bd25]");
         title.classList.remove("bg-position-[-40px_center]");
         title.classList.add("bg-left");
 
