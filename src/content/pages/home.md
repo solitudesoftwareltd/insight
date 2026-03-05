@@ -178,9 +178,9 @@ sections:
               
           *   FSDUs
               
-          *   headers
+          *   Headers
               
-          *   wobblers
+          *   Wobblers
               
           *   Physical‑to‑digital assets
         form: https://diversefinefood.co.uk/
