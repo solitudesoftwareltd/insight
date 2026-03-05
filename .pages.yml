@@ -259,7 +259,7 @@ components:
     fields:
       - name: title
         label: Title
-        type: string
+        type: rich-text
       - name: subtitle
         label: Subtitle
         type: rich-text
