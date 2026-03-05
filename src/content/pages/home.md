@@ -265,7 +265,7 @@ sections:
           consectetur euismod..
         name: Rob Baker, Managing Director, Taylor Wimpey
   - type: about
-    title: WE BELIEVE
+    title: WHY INSIGHT DPA
     content: >-
       Many screen networks fail because content becomes generic. Many print
       programmes underperform because they’re static and slow to adapt.
