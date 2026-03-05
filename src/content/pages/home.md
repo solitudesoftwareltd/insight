@@ -156,16 +156,19 @@ sections:
   - type: careers
     title: Crafting **physical experiences** that bring **brands to life**
     items:
-      - title: PHYSICAL
+      - title: Creative & artwork production
         description: |-
-          *   Increase industry awareness
+          *   campaign visuals
               
-          *   Deliver modern work experience
+          *   POS
               
-          *   Drive recruitment up
+          *   packaging
               
-
-          Fill out our Candidate Engagement Request Brief
+          *   brochures
+              
+          *   catalogues
+              
+          *   motion‑ready digital assets
         form: https://diversefinefood.co.uk/
       - title: DIGITAL
         description: |-
