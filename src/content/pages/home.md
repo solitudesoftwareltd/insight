@@ -194,6 +194,18 @@ sections:
               
           *   Quality control
         form: https://diversefinefood.co.uk/
+      - title: Studio support
+        description: |-
+          *   Adaptations
+              
+          *   Resizing
+              
+          *   Translations
+              
+          *   Artwork corrections
+              
+          *   Screen environments
+        form: https://diversefinefood.co.uk/
   - type: why
     title: designed once. activated everywhere
     content: >-
