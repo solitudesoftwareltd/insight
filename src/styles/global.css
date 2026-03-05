@@ -161,9 +161,8 @@
   h2 {
     @apply text-8xl md:text-[8.75rem] 
       tracking-normal leading-16 md:leading-24 
-      bg-[linear-gradient(68deg,#EC008C_3.97%,#FFF_31.24%,#00A7E7_46.14%)] bg-clip-text 
-      text-transparent
-      [-webkit-text-fill-color:transparent];
+      
+      text-white;
   }
 
   h3, h4{
