@@ -12,7 +12,7 @@ sections:
       physical environments by connecting digital screen networks with
       world‑class design, print and activation services.
   - type: carousel
-    title: EXPLORE
+    title: DESIGNED ONCE, ACTIVATED EVERYWHERE
     subtitle: OUR WORK & INDUSTRY CONTENT
     slides:
       - image: /assets/Build-Torbay.jpg
