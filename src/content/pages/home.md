@@ -254,12 +254,12 @@ sections:
       friction, reduce duplication, and protect brand consistency at scale.
   - type: testimonials
     slides:
-      - image: /assets/Exeter-city-test-2.jpg
+      - image: /assets/HP_Image.jpg
         quote: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius
           auctor tincidunt. Sed interdum eu est at viverra. Fusce pharetra
           consectetur euismod."'
         name: Marcus Flitcroft, Technical Director,  Football Club
-      - image: /assets/taylor-testimonial.jpg
+      - image: /assets/HP_Image.jpg
         quote: “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius
           auctor tincidunt. Sed interdum eu est at viverra. Fusce pharetra
           consectetur euismod..
