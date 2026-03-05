@@ -184,14 +184,15 @@ sections:
               
           *   Physical‑to‑digital assets
         form: https://diversefinefood.co.uk/
-      - title: CONTINUOUS
+      - title: Print production management
         description: |-
-          *   Provide for specialist needs
+          *   Material selection
               
-          *   Improve lives
+          *   Proofing
               
-
-          Fill out our Create Social Value Brief
+          *   Colour accuracy
+              
+          *   Quality control
         form: https://diversefinefood.co.uk/
   - type: why
     title: designed once. activated everywhere
