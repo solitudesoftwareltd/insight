@@ -262,7 +262,7 @@ components:
         type: string
       - name: subtitle
         label: Subtitle
-        type: string
+        type: rich-text
       - name: slides
         label: Slides
         type: object
