@@ -10,16 +10,18 @@ type CareerItem = {
 type Props = {
   type: "careers";
   title: string;
+  subtitle:string;
   items: CareerItem[];
 };
 
-const { title, items } = Astro.props;
+const { title, subtitle, items } = Astro.props;
 ---
 
 <section class="shell text-center flex flex-col items-end justify-end" id="how">
   <h3 class="self-center" set:html={marked.parseInline(title)} />
+  <div class="mt-4" set:html={marked.parse(subtitle)} />
   <div
-    class="grid grid-rows-2 sm:grid-row-1 sm:grid-cols-2 text-left w-full max-w-5xl mt-8 sm:mt-14 md:mt-24 pb-10 sm:pb-20 md:pb-32 relative"
+    class="grid grid-rows-1 sm:grid-row-1 sm:grid-cols-2 text-left w-full max-w-5xl mt-8 sm:mt-14 md:mt-24 pb-10 sm:pb-20 md:pb-32 relative"
   >
     <div
       class="absolute h-full top-0 left-1/2 -translate-x-1/2 hidden sm:grid grid-rows-[1fr_auto] gap-3 justify-items-center"
@@ -31,7 +33,7 @@ const { title, items } = Astro.props;
       {
         items.map((item, index) => (
           <div
-            class={`career-title cursor-pointer pl-12 sm:mb-9 bg-[url(/src/assets/icon-hover.svg)] transition-all bg-no-repeat ${index === 0 ? "bg-left" : "bg-position-[-40px_center]"}`}
+            class={`career-title cursor-pointer pl-12 sm:mb-9 bg-[url(/src/assets/icon-hover.svg)] bg-size-[24px_24px] transition-all bg-no-repeat ${index === 0 ? "bg-left" : "bg-position-[-40px_center]"}`}
             data-index={index}
           >
             <h4

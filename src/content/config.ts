@@ -84,6 +84,7 @@ const careerItemSchema = z.object({
 const careersSectionSchema = z.object({
   type: z.literal("careers"),
   title: z.string(),
+  subtitle : z.string(),
   items: z.array(careerItemSchema).default([]),
 });
 
