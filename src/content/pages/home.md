@@ -2,7 +2,7 @@
 title: Home
 hero:
   heading: solving **workforce & social value** challenges
-  cover: /assets/Unknown-1.png
+  cover: /assets/HP_Image.jpg
 sections:
   - type: intro
     title: "## DESIGN **PRODUCTION** ACTIVIATION"
