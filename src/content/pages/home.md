@@ -268,7 +268,7 @@ sections:
     title: WHY INSIGHT DPA
     content: >-
       Many screen networks fail because content becomes generic. Many print
-      programmes underperform because they’re static and slow to adapt.
+      programmes under perform because they’re static and slow to adapt.
 
 
       Insight DPA exists to remove those seams. By bringing digital screens and
