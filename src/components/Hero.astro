@@ -9,13 +9,13 @@ const headingHtml = heading ? marked.parseInline(heading) : "";
 
 <section class="bg-white">
   <div
-    class="bg-linear-to-r from-black to-[#235c00] mix-blend-multiply relative min-h-120 md:min-h-202.5 flex"
+    class="relative min-h-120 md:min-h-202.5 flex"
   >
     {
       cover && (
         <img
           src={cover}
-          class="mix-blend-multiply absolute object-cover w-full h-full top-1/2 left-1/2 -translate-1/2 z-10"
+          class="absolute object-cover w-full h-full top-1/2 left-1/2 -translate-1/2 z-10"
         />
       )
     }
