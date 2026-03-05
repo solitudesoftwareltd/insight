@@ -144,7 +144,7 @@
   --font-sans-book: "Flama Semicondensed Book", system-ui, sans-serif;
   --font-sans-basic: "Flama Semicondensed Basic", system-ui, sans-serif;
 
-  --color-prose: oklch(0.9761 0 0);
+  --color-prose: #ffffff;
 }
 
 @layer base {
@@ -161,7 +161,6 @@
   h2 {
     @apply text-8xl md:text-[8.75rem] 
       tracking-normal leading-16 md:leading-24 
-      
       text-white;
   }
 
@@ -201,7 +200,7 @@
   [role="button"],
   .btn {
     @apply inline-flex flex-col items-center gap-2
-      text-base text-[#A5E0F7] uppercase font-nunito font-black tracking-widest
+      text-base text-[#89bd25] uppercase font-nunito font-black tracking-widest
       transition cursor-pointer
       focus:outline-none
       disabled:pointer-events-none disabled:opacity-50
@@ -216,7 +215,7 @@
       w-14 h-14
       bg-no-repeat bg-center
       bg-size-[56px_56px]
-      bg-[url(/src/assets/button.svg)];
+      bg-[url(/src/assets/button.png)];
   }
 
   button.play::before,
