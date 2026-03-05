@@ -158,28 +158,31 @@ sections:
     items:
       - title: Creative & artwork production
         description: |-
-          *   campaign visuals
+          *   Campaign visuals
               
           *   POS
               
-          *   packaging
+          *   Packaging
               
-          *   brochures
+          *   Brochures
               
-          *   catalogues
+          *   Catalogues
               
-          *   motion‑ready digital assets
+          *   Motion‑ready digital assets
         form: https://diversefinefood.co.uk/
-      - title: DIGITAL
+      - title: Retail POS and space design
         description: |-
-          *   Develop hard and soft skills
+          *   Signage
               
-          *   Fulfil your workforce
+          *   CTUs
               
-          *   Support freelancing and startups
+          *   FSDUs
               
-
-          Fill out our Workforce Training Request Survey
+          *   headers
+              
+          *   wobblers
+              
+          *   Physical‑to‑digital assets
         form: https://diversefinefood.co.uk/
       - title: CONTINUOUS
         description: |-
