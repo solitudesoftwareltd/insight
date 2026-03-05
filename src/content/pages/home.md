@@ -206,6 +206,16 @@ sections:
               
           *   Screen environments
         form: https://diversefinefood.co.uk/
+      - title: Packaging & prototyping
+        description: |-
+          *   CAD
+              
+          *   Dielines
+              
+          *   Mock‑ups
+              
+          *   Test runs
+        form: https://diversefinefood.co.uk/
   - type: why
     title: designed once. activated everywhere
     content: >-
