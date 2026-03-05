@@ -154,7 +154,7 @@ sections:
           mus. Vivamus lobortis urna in pulvinar molestie. Suspendisse eu ornare
           metus.
   - type: careers
-    title: DESIGN **TO WORK** TOGETHER
+    title: Crafting **physical experiences** that bring **brands to life**
     items:
       - title: PHYSICAL
         description: |-
