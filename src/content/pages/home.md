@@ -216,6 +216,16 @@ sections:
               
           *   Test runs
         form: https://diversefinefood.co.uk/
+      - title: "Procurement & supplier management "
+        description: |-
+          *   Print management
+              
+          *   Finishers
+              
+          *   Installers
+              
+          *   Logistics end‑to‑end
+        form: https://diversefinefood.co.uk/
   - type: why
     title: designed once. activated everywhere
     content: >-
