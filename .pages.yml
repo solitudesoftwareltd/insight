@@ -233,6 +233,9 @@ components:
         label: Section Title
         type: rich-text
         required: true
+      - name: subtitle
+        label: Subtitle
+        type: rich-text
       - name: items
         label: List Items
         type: object
