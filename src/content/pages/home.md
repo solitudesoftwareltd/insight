@@ -1,7 +1,9 @@
 ---
 title: Home
 hero:
-  heading: solving **workforce & social value** challenges
+  heading: |-
+    turning **physical spaces** into a  
+    **connected activation channel**
   cover: /assets/HP_Image.jpg
 sections:
   - type: intro
