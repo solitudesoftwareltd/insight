@@ -12,7 +12,7 @@ sections:
       physical environments by connecting digital screen networks with
       world‑class design, print and activation services.
   - type: carousel
-    title: DESIGNED **ONCE**, ACTIVATED **EVERYWHERE**
+    title: "### DESIGNED **ONCE**, ACTIVATED **EVERYWHERE**"
     subtitle: "Our difference is how these two disciplines connect. Creative
       concepts are developed once, then activated consistently across:"
     slides:
