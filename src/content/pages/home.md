@@ -15,13 +15,14 @@ sections:
     title: EXPLORE
     subtitle: OUR WORK & INDUSTRY CONTENT
     slides:
-      - image: /assets/CITB.jpg
-        sector: CREATIVE
-        caption: Backstage Centre
+      - image: /assets/Build-Torbay.jpg
+        sector: Construction
+        caption: Build Torbay/Torbay Council
         link: https://app.pagescms.org/solitudesoftwareltd/iie/master/file/home
-        problem: Workforce Challenges & Candidate Engagement
+        problem: "Workforce Challenges & Candidate Engagement "
         solution: 360º Films & VR Headsets
-        value: Increased candidate engagement metrics and training
+        value: Increased candidate engagement metrics. use with schools by employers to
+          maximise engagement.
         fullDescription: >-
           ### OVERVIEW
 
@@ -49,14 +50,13 @@ sections:
           natoque penatibus et magnis dis parturient montes, nascetur ridiculus
           mus. Vivamus lobortis urna in pulvinar molestie. Suspendisse eu ornare
           metus.
-      - image: /assets/Build-Torbay.jpg
-        sector: Construction
-        caption: Build Torbay/Torbay Council
+      - image: /assets/CITB.jpg
+        sector: CREATIVE
+        caption: Backstage Centre
         link: https://app.pagescms.org/solitudesoftwareltd/iie/master/file/home
-        problem: "Workforce Challenges & Candidate Engagement "
+        problem: Workforce Challenges & Candidate Engagement
         solution: 360º Films & VR Headsets
-        value: Increased candidate engagement metrics. use with schools by employers to
-          maximise engagement.
+        value: Increased candidate engagement metrics and training
         fullDescription: >-
           ### OVERVIEW
 
@@ -159,108 +159,6 @@ sections:
         problem: Workforce Challenges & Candidate Engagement
         solution: 360º Films & VR Headsets
         value: Increased candidate engagement metrics
-        fullDescription: >-
-          ### OVERVIEW
-
-
-          Quisque in aliquet nulla, sit amet ultricies neque. Vivamus ut
-          scelerisque erat, ut maximus mauris. Suspendisse finibus egestas
-          ligula, ornare mattis orci lobortis sit amet.
-
-
-          ### BUSINESS
-
-
-          Duis at dignissim neque. Aliquam dictum porttitor metus, vitae
-          sagittis sapien euismod in. Sed aliquam blandit sagittis. Orci varius
-          natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-          mus. Vivamus lobortis urna in pulvinar molestie. Suspendisse eu ornare
-          metus.
-
-
-          ### INDUSTRY
-
-
-          Duis at dignissim neque. Aliquam dictum porttitor metus, vitae
-          sagittis sapien euismod in. Sed aliquam blandit sagittis. Orci varius
-          natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-          mus. Vivamus lobortis urna in pulvinar molestie. Suspendisse eu ornare
-          metus.
-      - image: /assets/libraries-unlimited.jpg
-        sector: Creative
-        caption: Energy Management Solutions
-        link: https://app.pagescms.org/solitudesoftwareltd/iie/master/file/home
-        problem: Workforce Challenges & Candidate Engagement
-        solution: 360º Films & VR Headsets
-        value: Increased candidate engagement metrics
-        fullDescription: >-
-          ### OVERVIEW
-
-
-          Quisque in aliquet nulla, sit amet ultricies neque. Vivamus ut
-          scelerisque erat, ut maximus mauris. Suspendisse finibus egestas
-          ligula, ornare mattis orci lobortis sit amet.
-
-
-          ### BUSINESS
-
-
-          Duis at dignissim neque. Aliquam dictum porttitor metus, vitae
-          sagittis sapien euismod in. Sed aliquam blandit sagittis. Orci varius
-          natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-          mus. Vivamus lobortis urna in pulvinar molestie. Suspendisse eu ornare
-          metus.
-
-
-          ### INDUSTRY
-
-
-          Duis at dignissim neque. Aliquam dictum porttitor metus, vitae
-          sagittis sapien euismod in. Sed aliquam blandit sagittis. Orci varius
-          natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-          mus. Vivamus lobortis urna in pulvinar molestie. Suspendisse eu ornare
-          metus.
-      - image: /assets/Exeter-City.jpg
-        sector: SPORT
-        caption: Exeter City FC
-        link: https://app.pagescms.org/solitudesoftwareltd/iie/master/file/home
-        problem: Workforce Challenges & Customer Engagement
-        solution: 360º Films & VR Headsets
-        value: "Increased candidate engagement metrics "
-        fullDescription: >-
-          ### OVERVIEW
-
-
-          Quisque in aliquet nulla, sit amet ultricies neque. Vivamus ut
-          scelerisque erat, ut maximus mauris. Suspendisse finibus egestas
-          ligula, ornare mattis orci lobortis sit amet.
-
-
-          ### BUSINESS
-
-
-          Duis at dignissim neque. Aliquam dictum porttitor metus, vitae
-          sagittis sapien euismod in. Sed aliquam blandit sagittis. Orci varius
-          natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-          mus. Vivamus lobortis urna in pulvinar molestie. Suspendisse eu ornare
-          metus.
-
-
-          ### INDUSTRY
-
-
-          Duis at dignissim neque. Aliquam dictum porttitor metus, vitae
-          sagittis sapien euismod in. Sed aliquam blandit sagittis. Orci varius
-          natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-          mus. Vivamus lobortis urna in pulvinar molestie. Suspendisse eu ornare
-          metus.
-      - image: /assets/HMPrisons2.jpg
-        sector: Government
-        caption: HMP Exeter/EAB
-        link: https://app.pagescms.org/solitudesoftwareltd/iie/master/file/home
-        problem: Employer Engagement
-        solution: "Leadership, Marketing Strategies, 360º Films & VR Headsets "
-        value: Increased employer and prison leaver engagement metrics
         fullDescription: >-
           ### OVERVIEW
 
