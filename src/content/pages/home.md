@@ -13,7 +13,8 @@ sections:
       world‑class design, print and activation services.
   - type: carousel
     title: DESIGNED ONCE, ACTIVATED EVERYWHERE
-    subtitle: OUR WORK & INDUSTRY CONTENT
+    subtitle: "Our difference is how these two disciplines connect. Creative
+      concepts are developed once, then activated consistently across:"
     slides:
       - image: /assets/Build-Torbay.jpg
         sector: Physical POS
