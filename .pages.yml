@@ -190,7 +190,7 @@ components:
         label: Mugshots
         type: object
         list:
-          max: 2
+          max: 3
           collapsible:
             collapsed: true
             summary: "{fields.name}"
