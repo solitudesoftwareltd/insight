@@ -168,6 +168,10 @@
     @apply text-prose font-display text-6xl md:text-[5rem] uppercase tracking-wide leading-15;
   }
 
+  h3{
+    @apply mb-6;
+  }
+
   h4{
     @apply tracking-wider text-6xl;
   }
@@ -265,7 +269,7 @@
   }
 
   .grad-line {
-    @apply w-0.5 bg-[#fff];
+    @apply w-0.5 bg-[#89bd25];
   }
 
   .grad-line.horo{
