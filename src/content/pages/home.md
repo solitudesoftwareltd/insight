@@ -282,6 +282,19 @@ sections:
       *   Create new, sustainable revenue streams
           
       *   Reduce cost, waste and operational complexity
+    image: /assets/Unknown.png
+    cover: >-
+      ### The Insight DPA Promise.
+
+
+      We turn physical space into a connected, commercial activation channel
+      combining the craft of design and production with the power of digital
+      media.
+
+
+      If you’re considering digital screens, already have them but aren’t seeing
+      the return you expected, or want your physical and digital activation to
+      finally work as one, we should talk.
     mugshots:
       - image: /assets/dan 1.png
         name: Matt Rogers
