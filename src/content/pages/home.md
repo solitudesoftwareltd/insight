@@ -302,4 +302,7 @@ sections:
       - image: /assets/luke 1.png
         name: Tom Simpson
         position: Director Finance
+      - image: /assets/dan 1.png
+        name: Charlie Widdows
+        position: CEO
 ---
