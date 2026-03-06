@@ -282,7 +282,7 @@ sections:
       *   Create new, sustainable revenue streams
           
       *   Reduce cost, waste and operational complexity
-    image: /assets/Unknown.png
+    image: /assets/Image2.jpg
     cover: >-
       ### The Insight DPA Promise.
 
