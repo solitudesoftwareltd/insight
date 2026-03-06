@@ -283,11 +283,11 @@
   }
 
   .swiper-pagination-bullet {
-    @apply w-9.25! h-9.25! bg-[url(/src/assets/pagination.svg)]! border-0! rounded-none! bg-transparent! opacity-100!;
+    @apply w-9.25! h-9.25!  border-2! border-[#89bd25]! rounded-full! bg-transparent! opacity-100!;
   }
 
   .swiper-pagination-bullet-active {
-    @apply bg-[url(/src/assets/pagination-active.svg)]!;
+    @apply bg-[#89bd25]!;
   }
   
   .carousel-full-description h3{

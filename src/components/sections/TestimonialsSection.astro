@@ -30,7 +30,7 @@ const { slides } = Astro.props;
       {
         slides.map((slide) => (
           <div class="swiper-slide bg-white">
-            <div class="relative w-full h-150 sm:h-177.5 flex items-center justify-center bg-linear-to-r from-[#00A7E7] to-[#EC008C] mix-blend-multiply">
+            <div class="relative w-full h-150 sm:h-177.5 flex items-center justify-center">
               <img
                 src={slide.image}
                 class="mix-blend-multiply w-full h-full object-cover absolute"
@@ -43,7 +43,7 @@ const { slides } = Astro.props;
                   set:html={slide.quote}
                 />
 
-                <p class="text-[#A5E0F7] text-xl sm:text-3xl font-bold">
+                <p class="text-[#89bd25] text-xl sm:text-3xl font-bold">
                   {slide.name}
                 </p>
               </div>
@@ -56,11 +56,11 @@ const { slides } = Astro.props;
     <div class="hidden md:block absolute w-full top-1/2 left-0">
       <div class="shell flex justify-between">
         <div
-          class="swiper-button-prev h-18.5! w-6.5! bg-[url(/src/assets/arrow.svg)] [&>svg]:hidden rotate-180 relative!"
+          class="swiper-button-prev h-18.5! w-6.5! relative!"
         >
         </div>
         <div
-          class="swiper-button-next h-18.5! w-6.5! bg-[url(/src/assets/arrow.svg)] [&>svg]:hidden relative!"
+          class="swiper-button-next h-18.5! w-6.5! relative!"
         >
         </div>
       </div>

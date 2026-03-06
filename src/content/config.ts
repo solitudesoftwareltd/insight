@@ -115,6 +115,8 @@ const aboutSectionSchema = z.object({
   type: z.literal("about"),
   title: z.string(),
   content: z.string(),
+  cover: z.string(),
+  image: z.string(),
   mugshots: z.array(mugshotSchema).max(2).default([]),
 });
 
