@@ -180,6 +180,12 @@ components:
         label: Content
         type: rich-text
         required: true
+      - name: image
+        label: Image
+        type: image
+      - name: cover
+        label: Cover text
+        type: rich-text
       - name: mugshots
         label: Mugshots
         type: object
