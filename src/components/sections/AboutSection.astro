@@ -53,8 +53,8 @@ const { title, content, mugshots, image, cover } = Astro.props;
   class="shell about-section pb-8 md:py-24 flex flex-col justify-end"
   id="about-team"
 >
-  <div class="max-w-5xl w-full grid md:grid-cols-[200px_1fr]">  
-    <div></div>
+  <div class="max-w-5xl w-full grid md:grid-cols-[1fr]">  
+    
     <div
       class=" md:pl-12  relative flex flex-col justify-center"
     >
@@ -68,7 +68,7 @@ const { title, content, mugshots, image, cover } = Astro.props;
               mugshots.map((mugshot) => (
                 <div class="mugshot max-w-2xs sm:max-w-none">
                   <img src={mugshot.image} alt={mugshot.name} />
-                  <div class="bg-linear-to-r from-[#00A7E7] to-[#EC008C] max-w-[80%] pl-2 lg:pl-8 pr-2 py-6 translate-x-6 -translate-y-7 grid grid-cols-[1fr_32px] items-center justify-between gap-2 lg:gap-5">
+                  <div class="bg-[#89bd25] max-w-[80%] pl-2 lg:pl-8 pr-2 py-6 translate-x-6 -translate-y-7 grid grid-cols-[1fr_32px] items-center justify-between gap-2 lg:gap-5">
                     <div>
                       <h4 class="text-xl lg:text-2xl font-sans capitalize font-bold leading-5">
                         {mugshot.name}
