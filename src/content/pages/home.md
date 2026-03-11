@@ -305,4 +305,47 @@ sections:
       - image: /assets/dan 1.png
         name: Charlie Widdows
         position: CEO
+  - type: how
+    slides:
+      - image: /assets/HP_Image.jpg
+        content: >-
+          ### Who we work with
+
+
+          We partner with:
+
+
+          *   Retailers and convenience groups modernising in‑store
+          communication and unlocking brand revenue
+              
+          *   Hospitality and leisure operators enhancing guest experience and
+          monetising dwell time
+              
+          *   Property owners and estate managers investing in future‑proof
+          digital and physical infrastructure
+              
+          *   Brands and agencies seeking high‑quality environments beyond
+          traditional OOH
+      - image: /assets/HP_Image.jpg
+        content: >-
+          ### How we work
+
+
+          We typically start small and scale fast:
+
+
+          *   Design the activation system - aligning physical assets and
+          digital screens to clear objectives
+              
+          *   Pilot in live environments - proving value in a subset of
+          locations
+              
+          *   Commercialise the opportunity - packaging the proposition for
+          internal teams and partners
+              
+          *   Scale, operate and optimise - expanding the network and refining
+          performance over time
+              
+
+          This approach reduces risk and builds confidence
 ---
