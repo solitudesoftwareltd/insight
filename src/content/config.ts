@@ -105,6 +105,17 @@ const testimonialsSectionSchema = z.object({
   slides: z.array(testimonialSlideSchema).default([]),
 });
 
+const howAndWhoSlideSchema = z.object({
+  image: z.string(),
+  quote: z.string(),
+  name: z.string(),
+});
+
+const howAndWhoSectionSchema = z.object({
+  type: z.literal("howAndWho"),
+  slides: z.array(howAndWhoSlideSchema).default([]),
+});
+
 const mugshotSchema = z.object({
   image: z.string(),
   name: z.string(),
