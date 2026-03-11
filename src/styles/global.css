@@ -250,7 +250,7 @@
   input[type=text],
   input[type=url],
   input[type=email]{
-    @apply h-17.5 border border-[#EC008C] p-0 w-full text-prose font-sans text-xl font-light px-5;
+    @apply h-17.5 border border-[#89bd25] p-0 w-full text-prose font-sans text-xl font-light px-5;
   }
 
   textarea::placeholder,
