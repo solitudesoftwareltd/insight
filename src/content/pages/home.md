@@ -326,6 +326,7 @@ sections:
               
           *   Brands and agencies seeking high‑quality environments beyond
           traditional OOH
+        button: https://app.pagescms.org/solitudesoftwareltd/insight/master/file/home
       - image: /assets/HP_Image.jpg
         content: >-
           ### How we work
