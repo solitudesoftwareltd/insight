@@ -232,7 +232,7 @@ components:
             type: string
             required: true
 
-  carouselSection:
+  howAndWhoSection:
     type: object
     fields:
       - name: slides
