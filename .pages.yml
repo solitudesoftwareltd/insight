@@ -52,6 +52,10 @@ content:
             label: Testimonials section
             component: testimonialsSection
 
+          - name: how
+            label: How and who section
+            component: howAndWhoSection
+
           - name: about
             label: About section
             component: aboutSection
