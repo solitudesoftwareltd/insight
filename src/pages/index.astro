@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import IntroSection from "../components/sections/IntroSection.astro";
 import CarouselSection from "../components/sections/CarouselSection.astro";
+import HowAndWhoSection from "../components/sections/HowAndWhoSection.astro";
 import CareersSection from "../components/sections/CareersSection.astro";
 import WhySection from "../components/sections/WhySection.astro";
 import TestimonialsSection from "../components/sections/TestimonialsSection.astro";
@@ -34,6 +35,8 @@ const cover = hero?.cover ? `${hero.cover}` : null;
           return <TestimonialsSection {...section} />;
         case "about":
           return <AboutSection {...section} />;
+        case "how":
+          return <HowAndWhoSection {...section} />;
         default:
           return null;
       }

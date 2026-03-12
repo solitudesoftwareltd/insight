@@ -107,12 +107,12 @@ const testimonialsSectionSchema = z.object({
 
 const howAndWhoSlideSchema = z.object({
   image: z.string(),
-  quote: z.string(),
-  name: z.string(),
+  content: z.string(),
+  button: z.string().optional(),
 });
 
 const howAndWhoSectionSchema = z.object({
-  type: z.literal("howAndWho"),
+  type: z.literal("how"),
   slides: z.array(howAndWhoSlideSchema).default([]),
 });
 
@@ -138,6 +138,7 @@ const sectionsSchema = z
       carouselSectionSchema,
       careersSectionSchema,
       whySectionSchema,
+      howAndWhoSectionSchema,
       testimonialsSectionSchema,
       aboutSectionSchema,
     ]),

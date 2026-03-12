@@ -277,13 +277,15 @@
   }
 
   .about-section .content p,
+  .how-and-who-section p,
   .why-section .content p{
     @apply text-[1.375rem] mb-5;
   }
 
   .about-section .content ul p,
+  .how-and-who-section .content ul p,
   .why-section .content ul p{
-    @apply mb-0;
+    @apply mb-0!;
   }
 
   .swiper-pagination-bullet {

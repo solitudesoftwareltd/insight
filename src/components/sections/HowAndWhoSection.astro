@@ -1,13 +1,16 @@
 ---
+import { marked } from "marked";
+
 interface Slide {
   image: string;
   content: string;
-  button: string;
+  button?: string;
 }
 
 interface Props {
-  type: "howAndWho";
+  type: "how";
   slides: Slide[];
+
 }
 
 const { slides } = Astro.props;
@@ -17,13 +20,6 @@ const { slides } = Astro.props;
   class="how-and-who-section relative w-full h-150 sm:h-177.5"
   id="credibility"
 >
-
-  <img
-    src="assets/button-white.svg"
-    class="absolute z-20 left-1/2 top-10 sm:top-20 -translate-x-1/2"
-    loading="lazy"
-    width="100"
-  />
 
   <div class="swiper how-and-who-swiper h-full">
     <div class="swiper-wrapper">
@@ -37,10 +33,10 @@ const { slides } = Astro.props;
                 loading="lazy"
               />
 
-              <div class="relative z-10 max-w-4xl px-8 text-white text-center font-sans">
-                <blockquote
-                  class="text-xl sm:text-3xl leading-tight text-prose mb-6"
-                  set:html={slide.content}
+              <div class="relative z-10 max-w-4xl px-8 text-white text-left font-sans">
+                <div
+                  class="content mb-6"
+                  set:html={marked.parse(slide.content)}
                 />
 
                
