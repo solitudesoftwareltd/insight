@@ -252,59 +252,6 @@ sections:
 
       By managing creative, production and digital delivery together, we remove
       friction, reduce duplication, and protect brand consistency at scale.
-  - type: testimonials
-    slides:
-      - image: /assets/HP_Image.jpg
-        quote: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius
-          auctor tincidunt. Sed interdum eu est at viverra. Fusce pharetra
-          consectetur euismod."'
-        name: Marcus Flitcroft, Technical Director,  Football Club
-      - image: /assets/HP_Image.jpg
-        quote: “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius
-          auctor tincidunt. Sed interdum eu est at viverra. Fusce pharetra
-          consectetur euismod..
-        name: Rob Baker, Managing Director, Taylor Wimpey
-  - type: about
-    title: WHY INSIGHT DPA
-    content: >-
-      Many screen networks fail because content becomes generic. Many print
-      programmes under perform because they’re static and slow to adapt.
-
-
-      Insight DPA exists to remove those seams. By bringing digital screens and
-      physical production under one accountable partner, we help brands:
-
-
-      *   Influence decisions at the point of action
-          
-      *   Extend the lifespan and impact of campaigns
-          
-      *   Create new, sustainable revenue streams
-          
-      *   Reduce cost, waste and operational complexity
-    image: /assets/Image2.jpg
-    cover: >-
-      ### The Insight DPA Promise.
-
-
-      We turn physical space into a connected, commercial activation channel
-      combining the craft of design and production with the power of digital
-      media.
-
-
-      If you’re considering digital screens, already have them but aren’t seeing
-      the return you expected, or want your physical and digital activation to
-      finally work as one, we should talk.
-    mugshots:
-      - image: /assets/dan 1.png
-        name: Matt Rogers
-        position: Director Operations
-      - image: /assets/luke 1.png
-        name: Tom Simpson
-        position: Director Finance
-      - image: /assets/dan 1.png
-        name: Charlie Widdows
-        position: CEO
   - type: how
     slides:
       - image: /assets/HP_Image.jpg
@@ -349,4 +296,57 @@ sections:
               
 
           This approach reduces risk and builds confidence
+  - type: about
+    title: WHY INSIGHT DPA
+    content: >-
+      Many screen networks fail because content becomes generic. Many print
+      programmes under perform because they’re static and slow to adapt.
+
+
+      Insight DPA exists to remove those seams. By bringing digital screens and
+      physical production under one accountable partner, we help brands:
+
+
+      *   Influence decisions at the point of action
+          
+      *   Extend the lifespan and impact of campaigns
+          
+      *   Create new, sustainable revenue streams
+          
+      *   Reduce cost, waste and operational complexity
+    image: /assets/Image2.jpg
+    cover: >-
+      ### The Insight DPA Promise.
+
+
+      We turn physical space into a connected, commercial activation channel
+      combining the craft of design and production with the power of digital
+      media.
+
+
+      If you’re considering digital screens, already have them but aren’t seeing
+      the return you expected, or want your physical and digital activation to
+      finally work as one, we should talk.
+    mugshots:
+      - image: /assets/dan 1.png
+        name: Matt Rogers
+        position: Director Operations
+      - image: /assets/luke 1.png
+        name: Tom Simpson
+        position: Director Finance
+      - image: /assets/dan 1.png
+        name: Charlie Widdows
+        position: CEO
+  - type: testimonials
+    slides:
+      - image: /assets/HP_Image.jpg
+        quote: '"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius
+          auctor tincidunt. Sed interdum eu est at viverra. Fusce pharetra
+          consectetur euismod."'
+        name: Marcus Flitcroft, Technical Director,  Football Club
+      - image: /assets/HP_Image.jpg
+        quote: “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius
+          auctor tincidunt. Sed interdum eu est at viverra. Fusce pharetra
+          consectetur euismod..
+        name: Rob Baker, Managing Director, Taylor Wimpey
 ---
