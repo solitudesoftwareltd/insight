@@ -40,7 +40,7 @@ content:
             label: Contact form section
             component: contactFormSection
 
-          - name: careers
+          - name: what
             label: Careers section
             component: careersSection
 
