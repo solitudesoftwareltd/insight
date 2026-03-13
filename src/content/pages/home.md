@@ -233,6 +233,33 @@ sections:
         networks across retail, hospitality, leisure and property estates. From
         initial strategy through to live operation, we handle the full
         lifecycle, ensuring screens don’t just go live, but deliver value.
+      items:
+        - title: Screen strategy & network design
+          description: |-
+            *   defining screen formats
+                
+            *   locations and use‑cases based on customer behaviour
+                
+            *   commercial objectives
+        - title: "Source, supply & installation "
+          description: |-
+            *   hardware specification
+                
+            *   procurement
+                
+            *   rollout and on‑site installation via trusted partners
+        - title: "Content & creative delivery "
+          description: |-
+            *   screen‑ready content
+                
+            *   earn attention in real‑world environments
+        - title: Media & commercial strategy
+          description: |-
+            *   building credible propositions
+                
+            *   brands, agencies and partners
+                
+            *   pricing and revenue models
   - type: why
     title: designed once. activated everywhere
     content: >-
