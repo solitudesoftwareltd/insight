@@ -294,11 +294,6 @@ components:
                 type: rich-text
                 required: true
   
-              - name: form
-                label: Form
-                type: string
-                required: true
-  
       - name: digital
         label: Digital Roles
         type: object
@@ -328,11 +323,6 @@ components:
               - name: description
                 label: Description
                 type: rich-text
-                required: true
-  
-              - name: form
-                label: Form
-                type: string
                 required: true
 
   carouselSection:
