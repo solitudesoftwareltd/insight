@@ -153,9 +153,9 @@ sections:
           natoque penatibus et magnis dis parturient montes, nascetur ridiculus
           mus. Vivamus lobortis urna in pulvinar molestie. Suspendisse eu ornare
           metus.
-  - type: careers
+  - type: what
     physical:
-      title: Crafting physical experiences that bring brands to life
+      title: "### Crafting **physical experiences** that bring **brands to life**"
       subtitle: >-
         Over the years, our reputation has been built on delivering end‑to‑end
         design, print and production capability, from creative concept through
@@ -164,8 +164,71 @@ sections:
 
         This discipline provides the physical foundation that makes digital
         activation work.
+      items:
+        - title: Creative & artwork production
+          description: |-
+            *   Campaign visuals
+                
+            *   POS
+                
+            *   Packaging
+                
+            *   Brochures
+                
+            *   Catalogues
+                
+            *   Motion‑ready digital assets
+        - title: Retail POS and space design
+          description: |-
+            *   Signage
+                
+            *   CTUs
+                
+            *   FSDUs
+                
+            *   Headers
+                
+            *   Wobblers
+                
+            *   Physical‑to‑digital assets
+        - title: Print production management
+          description: |-
+            *   Material selection
+                
+            *   Proofing
+                
+            *   Colour accuracy
+                
+            *   Quality control
+        - title: Studio support
+          description: |-
+            *   Adaptations
+                
+            *   Resizing
+                
+            *   Translations
+                
+            *   Artwork corrections
+        - title: Packaging & prototyping
+          description: |-
+            *   CAD
+                
+            *   Dielines
+                
+            *   Mock‑ups
+                
+            *   Test runs
+        - title: Procurement & supplier management
+          description: |-
+            *   Print management
+                
+            *   Finishers
+                
+            *   Installers
+                
+            *   Logistics end‑to‑end
     digital:
-      title: Turning locations into a scalable media channel.
+      title: "### Turning locations into a **scalable media** channel."
       subtitle: We also focus on designing, building and operating digital screen
         networks across retail, hospitality, leisure and property estates. From
         initial strategy through to live operation, we handle the full
