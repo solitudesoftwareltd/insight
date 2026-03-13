@@ -5,6 +5,7 @@ hero:
     turning **physical spaces** into a  
     **connected activation** channel
   cover: /assets/HP_Image.jpg
+  video: nfjghfhgf
 sections:
   - type: intro
     title: "## DESIGN **PRODUCTION** ACTIVIATION"
