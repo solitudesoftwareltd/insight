@@ -41,8 +41,8 @@ content:
             component: contactFormSection
 
           - name: what
-            label: Careers section
-            component: careersSection
+            label: What we do section
+            component: whatSection
 
           - name: why
             label: Why section
@@ -260,7 +260,7 @@ components:
             type: string
             required: false
 
-  careersSection:
+  whatSection:
     type: object
     fields:
       - name: physical
