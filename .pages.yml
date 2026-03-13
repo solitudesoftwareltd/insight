@@ -263,33 +263,77 @@ components:
   careersSection:
     type: object
     fields:
-      - name: title
-        label: Section Title
-        type: rich-text
-        required: true
-      - name: subtitle
-        label: Subtitle
-        type: rich-text
-      - name: items
-        label: List Items
+      - name: physical
+        label: Physical Roles
         type: object
-        list:
-          collapsible:
-            collapsed: true
-            summary: "{fields.title}"
         fields:
           - name: title
-            label: Title
-            type: string
-            required: true
-          - name: description
-            label: Description
+            label: Section Title
             type: rich-text
             required: true
-          - name: form
-            label: Form
-            type: string
+  
+          - name: subtitle
+            label: Subtitle
+            type: rich-text
+  
+          - name: items
+            label: List Items
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{fields.title}"
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+  
+              - name: description
+                label: Description
+                type: rich-text
+                required: true
+  
+              - name: form
+                label: Form
+                type: string
+                required: true
+  
+      - name: digital
+        label: Digital Roles
+        type: object
+        fields:
+          - name: title
+            label: Section Title
+            type: rich-text
             required: true
+  
+          - name: subtitle
+            label: Subtitle
+            type: rich-text
+  
+          - name: items
+            label: List Items
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{fields.title}"
+            fields:
+              - name: title
+                label: Title
+                type: string
+                required: true
+  
+              - name: description
+                label: Description
+                type: rich-text
+                required: true
+  
+              - name: form
+                label: Form
+                type: string
+                required: true
 
   carouselSection:
     type: object
