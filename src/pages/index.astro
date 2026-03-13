@@ -4,12 +4,13 @@ import Hero from "../components/Hero.astro";
 import IntroSection from "../components/sections/IntroSection.astro";
 import CarouselSection from "../components/sections/CarouselSection.astro";
 import HowAndWhoSection from "../components/sections/HowAndWhoSection.astro";
-import CareersSection from "../components/sections/CareersSection.astro";
+import CareersSection from "../components/sections/WhatSection.astro";
 import WhySection from "../components/sections/WhySection.astro";
 import TestimonialsSection from "../components/sections/TestimonialsSection.astro";
 import AboutSection from "../components/sections/AboutSection.astro";
 import Form from "../components/Form.astro";
 import { getEntry } from "astro:content";
+import WhatSection from "../components/sections/WhatSection.astro";
 
 const home = await getEntry("pages", "home");
 if (!home) throw new Error("Missing content: src/content/pages/home.md");
@@ -27,8 +28,8 @@ const cover = hero?.cover ? `${hero.cover}` : null;
           return <IntroSection {...section} />;
         case "carousel":
           return <CarouselSection {...section} />;
-        case "careers":
-          return <CareersSection {...section} />;
+        case "what":
+          return <WhatSection {...section} />;
         case "why":
           return <WhySection {...section} />;
         case "testimonials":

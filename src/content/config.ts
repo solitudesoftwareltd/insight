@@ -57,6 +57,23 @@ const introSectionSchema = z.object({
   content: z.string(),
 });
 
+const whatItemSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+});
+
+const whatGroupSchema = z.object({
+  title: z.string(),
+  subtitle: z.string().optional(),
+  items: z.array(whatItemSchema).default([]),
+});
+
+const whatSectionSchema = z.object({
+  type: z.literal("what"),
+  physical: whatGroupSchema,
+  digital: whatGroupSchema,
+});
+
 const carouselSlideSchema = z.object({
   image: z.string(),
   sector: z.string(),
@@ -75,18 +92,6 @@ const carouselSectionSchema = z.object({
   slides: z.array(carouselSlideSchema).default([]),
 });
 
-const careerItemSchema = z.object({
-  title: z.string(),
-  description: z.string(),
-  form: z.string()
-});
-
-const careersSectionSchema = z.object({
-  type: z.literal("careers"),
-  title: z.string(),
-  subtitle : z.string(),
-  items: z.array(careerItemSchema).default([]),
-});
 
 const whySectionSchema = z.object({
   type: z.literal("why"),
@@ -136,7 +141,7 @@ const sectionsSchema = z
     z.discriminatedUnion("type", [
       introSectionSchema,
       carouselSectionSchema,
-      careersSectionSchema,
+      whatSectionSchema,
       whySectionSchema,
       howAndWhoSectionSchema,
       testimonialsSectionSchema,

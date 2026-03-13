@@ -1,0 +1,228 @@
+---
+import { marked } from "marked";
+
+type RoleItem = {
+  title: string;
+  description: string;
+};
+
+type RoleGroup = {
+  title: string;
+  subtitle?: string;
+  items: RoleItem[];
+};
+
+type Props = {
+  type: "what";
+  physical: RoleGroup;
+  digital: RoleGroup;
+};
+
+const { physical, digital } = Astro.props as Props;
+
+const groups = [
+  { name: "physical", label: "Physical", data: physical },
+  { name: "digital", label: "Digital", data: digital },
+];
+---
+
+<div class="career-tabs grid grid-cols-2 justify-center gap-4 mb-8 max-w-2xl ml-auto mr-auto pl-5 pr-5">
+  {groups.map((group, idx) => (
+    <button
+      class={`career-tab px-4 py-2 font-bold ${
+        idx === 0 ? "active-tab" : ""
+      }`}
+      data-group={group.name}
+    >
+      {group.label}
+    </button>
+  ))}
+</div>
+
+
+{groups.map((group, idx) => (
+  <section
+    class={`shell text-center flex flex-col items-end justify-end career-section invisible opacity-0 h-0 overflow-hidden transition-all duration-1000 ${
+      idx === 0 ? "active-section" : ""
+    } [.active-section]:visible [.active-section]:h-auto [.active-section]:opacity-100`}
+    id={`career-${group.name}`}
+  >
+    <h3 class="self-center" set:html={marked.parse(group.data.title)} />
+    {group.data.subtitle && (
+      <div class="mt-4" set:html={marked.parse(group.data.subtitle)} />
+    )}
+
+    <div class="grid grid-rows-1 sm:grid-row-1 sm:grid-cols-2 text-left w-full max-w-5xl mt-8 sm:mt-14 md:mt-24 pb-10 sm:pb-20 md:pb-32 relative">
+      <div class="absolute h-full top-0 left-1/2 -translate-x-1/2 hidden sm:grid grid-rows-[1fr_auto] gap-3 justify-items-center">
+        <div class="grad-line"></div>
+        <button>get in touch</button>
+      </div>
+
+      <div class="sm:pt-7 pl-4 sm:pl-0">
+        {group.data.items.map((item, index) => (
+          <div
+            class={`career-title cursor-pointer sm:pl-12 sm:mb-9 sm:bg-[url(/src/assets/icon-hover.svg)] bg-size-[24px_24px] transition-all bg-no-repeat ${index === 0 ? "bg-left" : "bg-position-[-40px_center]"}`}
+            data-index={index}
+          >
+            <h4
+              class={`text-xl sm:text-[1.625rem] font-sans sm:leading-7 ${
+                index === 0 ? "sm:text-[#89bd25]" : ""
+              }`}
+            >
+              {item.title}
+            </h4>
+          </div>
+
+          <div class="sm:hidden" set:html={marked.parse(item.description)} />
+        ))}
+      </div>
+
+      <div class="career-descriptions relative pt-8 sm:pt-0 hidden sm:block">
+        {group.data.items.map((item, index) => (
+          <div
+            class={`career-description ml-12 sm:ml-24 flex flex-col items-start justify-start absolute inset-0 transition-opacity duration-300 ${
+              index === 0 ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
+            data-index={index}
+          >
+            <div set:html={marked.parse(item.description)} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+))}
+
+
+<script>
+function initCareers() {
+
+  
+  const tabs = document.querySelectorAll(".career-tab");
+  const parentSections = document.querySelectorAll(".career-section");
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const groupName = tab.getAttribute("data-group");
+
+      // Update active tab styling
+      tabs.forEach((t) =>
+        t.classList.toggle(
+          "active-tab",
+          t.getAttribute("data-group") === groupName
+        )
+      );
+
+      // Show/hide sections
+      parentSections.forEach((section) => {
+        section.classList.toggle(
+          "active-section",
+          section.id === `career-${groupName}`
+        );
+      });
+    });
+  });
+
+
+  const sections = document.querySelectorAll("section.shell");
+
+  function initCareers() {
+    sections.forEach((section) => {
+      const titles = section.querySelectorAll<HTMLDivElement>(".career-title");
+      const descriptions = section.querySelectorAll<HTMLDivElement>(".career-description");
+
+      const clearSelect = () => {
+        titles.forEach((title) => {
+          title.classList.add("bg-position-[-40px_center]");
+          title.classList.remove("bg-left");
+          title.querySelector("h4")?.classList.remove("sm:text-[#89bd25]");
+        });
+      };
+
+      const handlers: Array<() => void> = [];
+
+      titles.forEach((title) => {
+        const handler = () => {
+          const index = title.getAttribute("data-index");
+
+          clearSelect();
+
+          title.querySelector("h4")?.classList.add("sm:text-[#89bd25]");
+          title.classList.remove("bg-position-[-40px_center]");
+          title.classList.add("bg-left");
+
+          descriptions.forEach((desc) => {
+            desc.classList.remove("opacity-100");
+            desc.classList.add("opacity-0", "pointer-events-none");
+          });
+
+          const matchingDesc = section.querySelector(
+            `.career-description[data-index="${index}"]`
+          );
+          if (matchingDesc) {
+            matchingDesc.classList.remove("opacity-0", "pointer-events-none");
+            matchingDesc.classList.add("opacity-100");
+          }
+        };
+
+        handlers.push(handler);
+      });
+
+      const mq = window.matchMedia("(min-width: 640px)");
+
+      // Attach handlers
+      const attach = () => {
+        titles.forEach((title, i) => {
+          title.addEventListener("mouseenter", handlers[i]);
+          title.addEventListener("click", handlers[i]);
+        });
+      };
+
+      // Detach handlers and reset styles for mobile
+      const detach = () => {
+        titles.forEach((title, i) => {
+          title.removeEventListener("mouseenter", handlers[i]);
+          title.removeEventListener("click", handlers[i]);
+          title.querySelector("h4")?.classList.remove("sm:text-[#89bd25]"); // remove active color
+        });
+
+        descriptions.forEach((desc) => {
+          desc.classList.remove("opacity-100");
+          desc.classList.add("opacity-0", "pointer-events-none");
+        });
+
+        // Reset first item to default (optional)
+        if (titles[0]) {
+          titles[0].querySelector("h4")?.classList.remove("sm:text-[#89bd25]");
+          titles[0].classList.add("bg-position-[-40px_center]");
+          titles[0].classList.remove("bg-left");
+        }
+      };
+
+      // Initial attach/detach
+      if (mq.matches) attach();
+      else detach();
+
+      // Listen for viewport changes
+      mq.addEventListener("change", (e) => {
+        if (e.matches) attach();
+        else detach();
+      });
+    });
+  }
+
+  // Initialize on first load
+  initCareers();
+
+  // Re-initialize if using Astro View Transitions
+  document.addEventListener("astro:page-load", initCareers);
+
+ 
+}
+
+// Initialize on first load
+initCareers();
+
+// Re-initialize if using Astro View Transitions
+document.addEventListener("astro:page-load", initCareers);
+</script>

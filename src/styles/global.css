@@ -148,8 +148,15 @@
 }
 
 @layer base {
+
+  :root {
+    @supports (interpolate-size: allow-keywords) {
+      interpolate-size: allow-keywords;
+    }
+  }
+
   body {
-    @apply antialiased text-slate-900;
+    @apply antialiased text-slate-900 ;
   }
 
   h1,
@@ -232,6 +239,19 @@
   [role="button"]:hover::before,
   .btn:hover::before {
     animation: jiggle 0.4s ease-in-out;
+  }
+
+  button.career-tab:hover::before,
+  button.career-tab::before{
+    @apply hidden;
+  }
+
+  button.career-tab{
+    @apply text-[#89bd25] border-2 border-[#89bd25] bg-transparent;
+  }
+
+  button.career-tab.active-tab{
+    @apply text-white bg-[#89bd25] border-2 border-[#89bd25];
   }
 
   button:hover {
